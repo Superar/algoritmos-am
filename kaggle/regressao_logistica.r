@@ -1,4 +1,5 @@
 require(rms)
+require("MLmetrics")
 
 #carregando dados
 d <- read.csv("~/sid/usp/algo_am/porto/train.csv", header=T,dec=".", sep=",")
@@ -25,11 +26,16 @@ y_pred <- round(p)
 attach(dd)
 table(target, y_pred)
 
+Accuracy(y_pred, target)
+
+plot(p[1:100], pch=18, col="red", xlim=c(1,100), ylim=c(0,1), ylab="probs",xlab="amostra")
+abline(h=0.5, col="green", lty=2)
+
+
+
 # avaliação nos dados de teste
 p <- predict(m, data=d_test, type="fitted")
 y_pred <- round(p)
 table(y_pred)
 
-plot(p[1:100], pch=18, col="red", xlim=c(1,100), ylim=c(0,1), ylab="probs",xlab="amostra")
-abline(h=0.5, col="green", lty=2)
 
