@@ -11,7 +11,8 @@ def plot_corr(data, features):
     plt.matshow(corr_mat)
     plt.xticks(range(len(corr_mat.columns)), corr_mat.columns, rotation=90)
     plt.yticks(range(len(corr_mat.columns)), corr_mat.columns)
-    plt.savefig('img/features_correlation.pdf', format='pdf')
+    plt.savefig('img/features_correlation.pdf',
+                format='pdf', bbox_inches='tight')
     plt.close()
 
     # Correlation with respect to the target feature
@@ -25,7 +26,7 @@ def plot_corr(data, features):
 def plot_feature(data, feature):
     plot_values = data.loc[:, feature]
     plt.boxplot(plot_values)
-    plt.xticks(ticks=[1], labels=[feature])
+    plt.xticks([1], [feature])
     plt.tight_layout()
     plt.savefig('img/boxplot_'+feature+'.pdf', format='pdf')
     plt.close()
@@ -37,6 +38,7 @@ def main():
 
     # Class balance
     class_balance = df.groupby('target')['target'].count()
+    plt.figure(figsize=(6, 6))
     plt.pie(class_balance)
     plt.legend(class_balance.index)
     plt.tight_layout()
