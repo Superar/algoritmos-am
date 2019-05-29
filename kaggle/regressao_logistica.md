@@ -196,5 +196,5 @@ Plotando uma amostra:
 > abline(h=0.5, col="green", lty=2)
 
 ````
-
+![Amostra Resultado Regressão Log](https://github.com/Superar/algoritmos-am/blob/master/kaggle/regressao_logistica01.png)
 
