@@ -45,10 +45,32 @@ def main():
     plt.savefig('img/class_balance.pdf', format='pdf')
     plt.close()
 
-    # Correlation matrix
-    corr_features = {f for f in features if not re.search('(_cat|_bin)$', f)}
-    corr_features.remove('id')
-    plot_corr(df, corr_features)
+    # Separate numerical (ratio and ordinal) and categorical/binary features
+    num_features = {f for f in features if not re.search('(_cat|_bin)$', f)}
+    cat_bin_features = set(features) - num_features
+    num_features.remove('id')
+    # Fixate order to prevent inconsistency
+    num_features = list(num_features)
+    cat_bin_features = list(cat_bin_features)
+
+    # Get basic statistics
+    df.loc[:, num_features].describe().to_csv('num_features_statistics.csv')
+    cat_bin_df = pd.DataFrame(data=0, index=cat_bin_features,
+                              columns=['Mode', 'Count', 'Frequency'])
+    cat_bin_df.loc[cat_bin_features, 'Mode'] = df.loc[:,
+                                                      cat_bin_features].mode().values
+    for feature in cat_bin_features:
+        value_counts = df.loc[:, feature].value_counts()
+        mode_count = value_counts[cat_bin_df.loc[feature, 'Mode']]
+        cat_bin_df.loc[feature, 'Count'] = mode_count
+
+        value_frequency = df.loc[:, feature].value_counts(normalize=True)
+        mode_frequency = value_frequency[cat_bin_df.loc[feature, 'Mode']]
+        cat_bin_df.loc[feature, 'Frequency'] = mode_frequency*100
+    cat_bin_df.to_csv('cat_bin_statistics.csv')
+
+    # Correlation plot
+    plot_corr(df, num_features)
 
     # Important features selected according to the correlations
     important_features = ['ps_car_13', 'ps_reg_02', 'ps_car_12', 'ps_ind_15']
