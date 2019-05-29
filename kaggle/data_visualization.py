@@ -11,6 +11,7 @@ def plot_corr(data, features):
     plt.matshow(corr_mat)
     plt.xticks(range(len(corr_mat.columns)), corr_mat.columns, rotation=90)
     plt.yticks(range(len(corr_mat.columns)), corr_mat.columns)
+    plt.colorbar()
     plt.savefig('img/features_correlation.pdf',
                 format='pdf', bbox_inches='tight')
     plt.close()
