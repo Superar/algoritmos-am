@@ -44,8 +44,13 @@ print('Training: ', gnb.score(x_test.drop('target',axis=1), x_test['target']))
 
 # Testing holdout 80% - 20%
 y_pred = gnb.predict(x_test.drop('target',axis=1))
-print(classification_report(y_pred, x_test['target']))
+print("Holdout 80-20: " + classification_report(y_pred, x_test['target']))
 show_confusion_matrix(x_test,y_pred)
+
+# Testing holdout all dataset
+y_pred_all = gnb.predict(data.drop('target',axis=1))
+print("All dataset: "+ classification_report(y_pred_all, data['target']))
+show_confusion_matrix(data,y_pred_all)
 
 # Cross-Validation k=10
 scores = cross_val_score(gnb, data.drop('target',axis=1), data['target'] , cv=10)
