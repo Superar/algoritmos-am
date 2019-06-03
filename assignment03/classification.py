@@ -4,6 +4,7 @@ import os
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 from sklearn.datasets.base import load_iris
 from sklearn.model_selection import cross_validate
 from sklearn.neural_network import MLPClassifier
@@ -45,15 +46,26 @@ def read_glass():
 def run_glass_experiments(data):
     glass_X = data.drop(['Id', 'Type'], axis=1)
     glass_y = data.loc[:, 'Type']
+
     mlp = MLPClassifier(hidden_layer_sizes=(20, ),
                         activation='logistic',
                         solver='sgd',
                         max_iter=500)
-    results_mlp = cross_validate(mlp, glass_X, y=glass_y, cv=5,
-                                 scoring=['accuracy'],
-                                 return_train_score=True)
-    results_mlp = pd.DataFrame.from_dict(results_mlp)
-    return results_mlp
+    svm_rbf = SVC(kernel='rbf')
+
+    methods = {'MLP': mlp,
+               'SVM - RBF': svm_rbf}
+
+    results = list()
+    for method in methods:
+        results_model = cross_validate(methods[method],
+                                       glass_X, y=glass_y, cv=5,
+                                       scoring=['accuracy'],
+                                       return_train_score=True)
+        results_model['method'] = method
+        results_model['fold'] = np.arange(1, 6)
+        results.append(pd.DataFrame(results_model))
+    return pd.concat(results)
 
 
 def main():
@@ -65,8 +77,14 @@ def main():
 
     glass_data = read_glass()
     glass_results = run_glass_experiments(glass_data)
-    plt.bar(glass_results.index,
-            glass_results.loc[:, 'test_accuracy'])
+
+    results_by_method = glass_results.groupby('method')
+    for i, (key, _) in enumerate(results_by_method):
+        plot_x = results_by_method.get_group(key)['fold']
+        plot_x += 0.15 * (-1)**i
+        plot_y = results_by_method.get_group(key)['test_accuracy']
+        plt.bar(plot_x, plot_y, width=0.3, label=key)
+    plt.legend()
     plt.show()
 
 
