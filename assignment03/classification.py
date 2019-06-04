@@ -52,9 +52,16 @@ def run_glass_experiments(data):
                         solver='sgd',
                         max_iter=500)
     svm_rbf = SVC(kernel='rbf')
+    svm_sigmoid = SVC(kernel='sigmoid')
+    svm_linear = SVC(kernel='linear')
+    perceptron = Perceptron(max_iter=1000,
+                            tol=1e-3)
 
     methods = {'MLP': mlp,
-               'SVM - RBF': svm_rbf}
+               'SVM - RBF': svm_rbf,
+               'SVM - Sigmoid': svm_sigmoid,
+               'SVM - Linear': svm_linear,
+               'Perceptron': perceptron}
 
     results = list()
     for method in methods:
@@ -80,11 +87,15 @@ def main():
 
     results_by_method = glass_results.groupby('method')
     for i, (key, _) in enumerate(results_by_method):
-        plot_x = results_by_method.get_group(key)['fold']
-        plot_x += 0.15 * (-1)**i
+        plot_x_ticks = results_by_method.get_group(key)['fold']
+        plot_x = plot_x_ticks + np.arange(5)
+        plt.xticks(plot_x, plot_x_ticks)
+        plot_x += (i - i // 2) * 0.3 * (-1)**i
         plot_y = results_by_method.get_group(key)['test_accuracy']
         plt.bar(plot_x, plot_y, width=0.3, label=key)
     plt.legend()
+    plt.xlabel('Fold')
+    plt.ylabel('Test Accuracy')
     plt.show()
 
 
