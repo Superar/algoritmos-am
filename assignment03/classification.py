@@ -120,11 +120,11 @@ def plot_results(results):
         plot_x = plot_x_ticks + np.arange(5)
         plt.xticks(plot_x, plot_x_ticks)
         plot_x += (i - i // 2) * 0.3 * (-1)**i
-        plot_y = results_by_method.get_group(key)['test_accuracy']
+        plot_y = results_by_method.get_group(key)['test_accuracy'] * 100
         plt.bar(plot_x, plot_y, width=0.3, label=key)
     plt.legend()
     plt.xlabel('Fold')
-    plt.ylabel('Test Accuracy')
+    plt.ylabel('Test Accuracy (%)')
     plt.show()
 
 
