@@ -50,7 +50,7 @@ def run_glass_experiments(data):
     mlp = MLPClassifier(hidden_layer_sizes=(20, ),
                         activation='logistic',
                         solver='sgd',
-                        max_iter=500)
+                        max_iter=1000)
     svm_rbf = SVC(kernel='rbf')
     svm_sigmoid = SVC(kernel='sigmoid')
     svm_linear = SVC(kernel='linear')
@@ -75,17 +75,46 @@ def run_glass_experiments(data):
     return pd.concat(results)
 
 
-def main():
+def read_iris():
+    iris = load_iris()
+    return pd.DataFrame(data=np.c_[iris['data'], iris['target']],
+                        columns=iris['feature_names'] + ['target'])
 
-    # GLASS dataset
-    if not os.path.exists('assignment03/glass'):
-        os.mkdir('assignment03/glass')
-    download_glass_dataset()
 
-    glass_data = read_glass()
-    glass_results = run_glass_experiments(glass_data)
+def run_iris_experiments(data):
+    iris_X = data.drop('target', axis=1)
+    iris_y = data.loc[:, 'target']
 
-    results_by_method = glass_results.groupby('method')
+    mlp = MLPClassifier(hidden_layer_sizes=(20, ),
+                        activation='logistic',
+                        solver='adam',
+                        max_iter=2000)
+    svm_rbf = SVC(kernel='rbf')
+    svm_sigmoid = SVC(kernel='sigmoid')
+    svm_linear = SVC(kernel='linear')
+    perceptron = Perceptron(max_iter=1000,
+                            tol=1e-3)
+
+    methods = {'MLP': mlp,
+               'SVM - RBF': svm_rbf,
+               'SVM - Sigmoid': svm_sigmoid,
+               'SVM - Linear': svm_linear,
+               'Perceptron': perceptron}
+
+    results = list()
+    for method in methods:
+        results_model = cross_validate(methods[method],
+                                       iris_X, y=iris_y, cv=5,
+                                       scoring=['accuracy'],
+                                       return_train_score=True)
+        results_model['method'] = method
+        results_model['fold'] = np.arange(1, 6)
+        results.append(pd.DataFrame(results_model))
+    return pd.concat(results)
+
+
+def plot_results(results):
+    results_by_method = results.groupby('method')
     for i, (key, _) in enumerate(results_by_method):
         plot_x_ticks = results_by_method.get_group(key)['fold']
         plot_x = plot_x_ticks + np.arange(5)
@@ -97,6 +126,22 @@ def main():
     plt.xlabel('Fold')
     plt.ylabel('Test Accuracy')
     plt.show()
+
+
+def main():
+
+    # GLASS dataset
+    if not os.path.exists('assignment03/glass'):
+        os.mkdir('assignment03/glass')
+    download_glass_dataset()
+
+    glass_data = read_glass()
+    glass_results = run_glass_experiments(glass_data)
+    plot_results(glass_results)
+
+    iris_data = read_iris()
+    iris_results = run_iris_experiments(iris_data)
+    plot_results(iris_results)
 
 
 if __name__ == "__main__":
