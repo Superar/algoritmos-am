@@ -25,7 +25,7 @@ def download_glass_dataset():
     glass_files = ['glass.data', 'glass.names', 'glass.tag']
 
     for file_ in glass_files:
-        filepath = os.path.join('glass', file_)
+        filepath = os.path.join(os.getcwd() + '/glass', file_)
         if not os.path.exists(filepath):
             data = download_glass_file(file_)
             with open(filepath, 'w') as w_file:
@@ -37,7 +37,7 @@ def download_glass_dataset():
 def read_glass():
     attribute_names = ['Id', 'RI', 'Na', 'Mg',  # From glass.names
                        'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe', 'Type']
-    df = pd.read_csv('glass/glass.data',
+    df = pd.read_csv(os.getcwd() + '/glass/glass.data',
                      header=None,
                      names=attribute_names)
     return df
@@ -135,8 +135,8 @@ def plot_results(dataset, results):
 def main():
 
     # GLASS dataset
-    if not os.path.exists('glass'):
-        os.mkdir('glass')
+    if not os.path.exists(os.getcwd() + '/glass'):
+        os.mkdir(os.getcwd() + '/glass')
     download_glass_dataset()
 
     glass_data = read_glass()
