@@ -25,7 +25,7 @@ def download_glass_dataset():
     glass_files = ['glass.data', 'glass.names', 'glass.tag']
 
     for file_ in glass_files:
-        filepath = os.path.join('assignment03/glass', file_)
+        filepath = os.path.join('glass', file_)
         if not os.path.exists(filepath):
             data = download_glass_file(file_)
             with open(filepath, 'w') as w_file:
@@ -37,7 +37,7 @@ def download_glass_dataset():
 def read_glass():
     attribute_names = ['Id', 'RI', 'Na', 'Mg',  # From glass.names
                        'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe', 'Type']
-    df = pd.read_csv('assignment03/glass/glass.data',
+    df = pd.read_csv('glass/glass.data',
                      header=None,
                      names=attribute_names)
     return df
@@ -47,20 +47,22 @@ def run_glass_experiments(data):
     glass_X = data.drop(['Id', 'Type'], axis=1)
     glass_y = data.loc[:, 'Type']
 
-    mlp = MLPClassifier(hidden_layer_sizes=(20, ),
+    mlp = MLPClassifier(hidden_layer_sizes=(10, ),
                         activation='logistic',
-                        solver='sgd',
-                        max_iter=1000)
-    svm_rbf = SVC(kernel='rbf')
-    svm_sigmoid = SVC(kernel='sigmoid')
-    svm_linear = SVC(kernel='linear')
+                        solver='adam',
+                        max_iter=10000)
+    svm_rbf = SVC(kernel='rbf', gamma='auto')
+    svm_sigmoid = SVC(kernel='sigmoid', gamma='auto')
+    svm_linear = SVC(kernel='linear', gamma='auto')
+    svm_linear_ovo = SVC(kernel='linear', gamma='auto', decision_function_shape='ovo')
     perceptron = Perceptron(max_iter=1000,
                             tol=1e-3)
 
     methods = {'MLP': mlp,
                'SVM - RBF': svm_rbf,
                'SVM - Sigmoid': svm_sigmoid,
-               'SVM - Linear': svm_linear,
+               'SVM - Linear - OAA': svm_linear,
+               'SVM - Linear - AAA': svm_linear_ovo,
                'Perceptron': perceptron}
 
     results = list()
@@ -89,16 +91,18 @@ def run_iris_experiments(data):
                         activation='logistic',
                         solver='adam',
                         max_iter=2000)
-    svm_rbf = SVC(kernel='rbf')
-    svm_sigmoid = SVC(kernel='sigmoid')
-    svm_linear = SVC(kernel='linear')
+    svm_rbf = SVC(kernel='rbf', gamma='auto')
+    svm_sigmoid = SVC(kernel='sigmoid', gamma='auto')
+    svm_linear = SVC(kernel='linear', gamma='auto')
+    svm_linear_ovo = SVC(kernel='linear', gamma='auto', decision_function_shape='ovo')
     perceptron = Perceptron(max_iter=1000,
                             tol=1e-3)
 
     methods = {'MLP': mlp,
                'SVM - RBF': svm_rbf,
                'SVM - Sigmoid': svm_sigmoid,
-               'SVM - Linear': svm_linear,
+               'SVM - Linear - OAA': svm_linear,
+               'SVM - Linear - AAA': svm_linear_ovo,
                'Perceptron': perceptron}
 
     results = list()
@@ -113,7 +117,7 @@ def run_iris_experiments(data):
     return pd.concat(results)
 
 
-def plot_results(results):
+def plot_results(dataset, results):
     results_by_method = results.groupby('method')
     for i, (key, _) in enumerate(results_by_method):
         plot_x_ticks = results_by_method.get_group(key)['fold']
@@ -123,7 +127,7 @@ def plot_results(results):
         plot_y = results_by_method.get_group(key)['test_accuracy'] * 100
         plt.bar(plot_x, plot_y, width=0.3, label=key)
     plt.legend()
-    plt.xlabel('Fold')
+    plt.xlabel('%s - Fold' % dataset)
     plt.ylabel('Test Accuracy (%)')
     plt.show()
 
@@ -131,17 +135,17 @@ def plot_results(results):
 def main():
 
     # GLASS dataset
-    if not os.path.exists('assignment03/glass'):
-        os.mkdir('assignment03/glass')
+    if not os.path.exists('glass'):
+        os.mkdir('glass')
     download_glass_dataset()
 
     glass_data = read_glass()
     glass_results = run_glass_experiments(glass_data)
-    plot_results(glass_results)
+    plot_results('Glass', glass_results)
 
     iris_data = read_iris()
     iris_results = run_iris_experiments(iris_data)
-    plot_results(iris_results)
+    plot_results('Iris', iris_results)
 
 
 if __name__ == "__main__":
