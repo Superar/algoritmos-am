@@ -108,3 +108,4 @@ venv.bak/
 **/img/
 *.csv
 assignment03/glass/
+*.pdf
