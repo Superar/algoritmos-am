@@ -126,7 +126,8 @@ def plot_results(dataset, results):
         plot_x += (i - i // 2) * 0.3 * (-1)**i
         plot_y = results_by_method.get_group(key)['test_accuracy'] * 100
         plt.bar(plot_x, plot_y, width=0.3, label=key)
-    plt.legend()
+    plt.legend(loc='upper center', fancybox=True, ncol=3,
+               bbox_to_anchor=(0.5, 1.15))
     plt.xlabel('%s - Fold' % dataset)
     plt.ylabel('Test Accuracy (%)')
     plt.show()
