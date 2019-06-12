@@ -107,5 +107,11 @@ venv.bak/
 **/data/
 **/img/
 *.csv
-assignment03/glass/
+**/glass/
 *.pdf
+
+# Vscode
+.vscode/
+
+# Marcio
+estudos/
