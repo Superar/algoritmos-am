@@ -12,7 +12,7 @@ from sklearn.ensemble import BaggingClassifier
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.ensemble import RandomForestClassifier
 from mlxtend.classifier import StackingClassifier
-from sklearn.ensemble import VotingClassifier
+
 
 def download_glass_file(filename):
     print('Downloading \'{}\'...'.format(filename), file=sys.stderr)
@@ -59,16 +59,12 @@ def run_glass_experiments_ensemble(data):
     xgboost = xgb.XGBClassifier()
     decision_tree = DecisionTreeClassifier()
 
-    eclf = VotingClassifier(estimators=[('Bagging', bagging), ('Boosting', boosting), ('Stacking', stacking),
-                                        ('Random Forest', random_forest), ('XGBoost', xgboost),
-                                        ('Decision Tree', decision_tree)], voting='hard')
     methods = {' Bagging': bagging,
                ' Boosting': boosting,
                ' Stacking': stacking,
                ' Random Forest': random_forest,
                ' XGBoost': xgboost,
-               ' Decision Tree': decision_tree,
-               'Ensemble': eclf}
+               ' Decision Tree': decision_tree}
 
     results = list()
     for method in methods:
@@ -82,7 +78,6 @@ def run_glass_experiments_ensemble(data):
     return pd.concat(results)
 
 
-
 def plot_results(dataset, results):
     results_by_method = results.groupby('method')
     for i, (key, _) in enumerate(results_by_method):
@@ -93,7 +88,7 @@ def plot_results(dataset, results):
         plot_y = results_by_method.get_group(key)['test_accuracy'] * 100
         plt.bar(plot_x, plot_y, width=0.3, label=key)
     plt.legend(loc='upper center', fancybox=True, ncol=3,
-               bbox_to_anchor=(0.5, 1.25))
+               bbox_to_anchor=(0.5, 1.15))
     plt.xlabel('%s - Fold' % dataset)
     plt.ylabel('Test Accuracy (%)')
     plt.show()
