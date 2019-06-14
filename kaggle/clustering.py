@@ -48,18 +48,18 @@ def main():
     run_experiment(model, data)
     print(20*'-')
 
-    # KMeans - 10%
+    # KMeans - 5%
     df = df.groupby('target').apply(pd.DataFrame.sample,
-                                    frac=0.1).reset_index(drop=True)
+                                    frac=0.05).reset_index(drop=True)
     data = df.drop('id', axis=1)
 
-    print(5*'-', 'KMeans - 10%', 5*'-')
+    print(5*'-', 'KMeans - 5%', 5*'-')
     model = MiniBatchKMeans(n_clusters=100)
     run_experiment(model, data)
     print(20*'-')
 
-    # Agglomerative Clustering - 10%
-    print(5*'-', 'Agglomerative Clustering - 10%', 5*'-')
+    # Agglomerative Clustering - 5%
+    print(5*'-', 'Agglomerative Clustering - 5%', 5*'-')
     model = AgglomerativeClustering(n_clusters=2)
     run_experiment(model, data)
     print(30*'-')
