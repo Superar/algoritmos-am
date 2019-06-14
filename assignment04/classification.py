@@ -12,7 +12,7 @@ from sklearn.ensemble import BaggingClassifier
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.ensemble import RandomForestClassifier
 from mlxtend.classifier import StackingClassifier
-
+from sklearn.ensemble import VotingClassifier
 
 def download_glass_file(filename):
     print('Downloading \'{}\'...'.format(filename), file=sys.stderr)
@@ -45,7 +45,7 @@ def read_glass():
     return df
 
 
-def run_glass_experiments(data):
+def run_glass_experiments_ensemble(data):
     glass_X = data.drop(['Id', 'Type'], axis=1)
     glass_y = data.loc[:, 'Type']
 
@@ -59,12 +59,16 @@ def run_glass_experiments(data):
     xgboost = xgb.XGBClassifier()
     decision_tree = DecisionTreeClassifier()
 
-    methods = {'Bagging': bagging,
-               'Boosting': boosting,
-               'Stacking': stacking,
-               'Random Forest': random_forest,
-               'XGBoost': xgboost,
-               'Decision Tree': decision_tree}
+    eclf = VotingClassifier(estimators=[('Bagging', bagging), ('Boosting', boosting), ('Stacking', stacking),
+                                        ('Random Forest', random_forest), ('XGBoost', xgboost),
+                                        ('Decision Tree', decision_tree)], voting='hard')
+    methods = {' Bagging': bagging,
+               ' Boosting': boosting,
+               ' Stacking': stacking,
+               ' Random Forest': random_forest,
+               ' XGBoost': xgboost,
+               ' Decision Tree': decision_tree,
+               'Ensemble': eclf}
 
     results = list()
     for method in methods:
@@ -78,6 +82,7 @@ def run_glass_experiments(data):
     return pd.concat(results)
 
 
+
 def plot_results(dataset, results):
     results_by_method = results.groupby('method')
     for i, (key, _) in enumerate(results_by_method):
@@ -88,7 +93,7 @@ def plot_results(dataset, results):
         plot_y = results_by_method.get_group(key)['test_accuracy'] * 100
         plt.bar(plot_x, plot_y, width=0.3, label=key)
     plt.legend(loc='upper center', fancybox=True, ncol=3,
-               bbox_to_anchor=(0.5, 1.15))
+               bbox_to_anchor=(0.5, 1.25))
     plt.xlabel('%s - Fold' % dataset)
     plt.ylabel('Test Accuracy (%)')
     plt.show()
@@ -102,7 +107,7 @@ def main():
     download_glass_dataset()
 
     glass_data = read_glass()
-    glass_results = run_glass_experiments(glass_data)
+    glass_results = run_glass_experiments_ensemble(glass_data)
     plot_results('Glass', glass_results)
 
 
