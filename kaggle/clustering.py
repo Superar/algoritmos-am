@@ -18,6 +18,26 @@ def run_experiment(model, data):
     print('V-Measure: {:.2f}%'.format(v_m * 100))
 
 
+def plot_k_means(data):
+    X = data.drop('target', axis=1)
+    y = data.loc[:, 'target']
+
+    results = {'Homogeneity': list(),
+               'Completeness': list(),
+               'V-Measure': list()}
+    for k in range(2, 111, 10):
+        model = MiniBatchKMeans(n_clusters=k)
+        y_pred = model.fit_predict(X)
+        homo, comp, v_m = homogeneity_completeness_v_measure(y, y_pred)
+        results['Homogeneity'].append(homo)
+        results['Completeness'].append(comp)
+        results['V-Measure'].append(v_m)
+
+    df = pd.DataFrame(results, index=list(range(2, 111, 10)))
+    df.plot()
+    plt.show()
+
+
 def main():
     df = pd.read_csv('data/train.csv')
     data = df.drop('id', axis=1)
@@ -43,6 +63,8 @@ def main():
     model = AgglomerativeClustering(n_clusters=2)
     run_experiment(model, data)
     print(30*'-')
+
+    plot_k_means(data)
 
 
 if __name__ == "__main__":
