@@ -12,7 +12,7 @@ from sklearn.ensemble import BaggingClassifier
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.ensemble import RandomForestClassifier
 from mlxtend.classifier import StackingClassifier
-from sklearn.ensemble import VotingClassifier
+
 
 def download_glass_file(filename):
     print('Downloading \'{}\'...'.format(filename), file=sys.stderr)
@@ -59,16 +59,12 @@ def run_glass_experiments_ensemble(data):
     xgboost = xgb.XGBClassifier()
     decision_tree = DecisionTreeClassifier()
 
-    eclf = VotingClassifier(estimators=[('Bagging', bagging), ('Boosting', boosting), ('Stacking', stacking),
-                                        ('Random Forest', random_forest), ('XGBoost', xgboost),
-                                        ('Decision Tree', decision_tree)], voting='hard')
     methods = {' Bagging': bagging,
                ' Boosting': boosting,
                ' Stacking': stacking,
                ' Random Forest': random_forest,
                ' XGBoost': xgboost,
-               ' Decision Tree': decision_tree,
-               'Ensemble': eclf}
+               ' Decision Tree': decision_tree}
 
     results = list()
     for method in methods:
@@ -80,7 +76,6 @@ def run_glass_experiments_ensemble(data):
         results_model['fold'] = np.arange(1, 11)
         results.append(pd.DataFrame(results_model))
     return pd.concat(results)
-
 
 
 def plot_results(dataset, results):
