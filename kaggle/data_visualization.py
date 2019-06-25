@@ -7,7 +7,7 @@ from matplotlib import pyplot as plt
 
 def plot_corr(data, features):
     # Correlation between values
-    corr_mat = data.loc[:, features].corr()
+    corr_mat = data.loc[:, features].drop('target', axis=1).corr()
     plt.matshow(corr_mat)
     plt.xticks(range(len(corr_mat.columns)), corr_mat.columns, rotation=90)
     plt.yticks(range(len(corr_mat.columns)), corr_mat.columns)
