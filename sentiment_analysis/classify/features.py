@@ -115,7 +115,7 @@ class FeatureExtractor:
 
 	def make_pos(self, path='./data/resources/pos-pt/'):
 		nlpnet.set_data_dir(path)
-		# self.tagger = nlpnet.POSTagger()
+		self.tagger = nlpnet.POSTagger()
 
 	def get_representation(self, sentences):
 		if self.verbose: print(len(sentences))
@@ -177,16 +177,16 @@ class FeatureExtractor:
 					ADV_count = 0
 					ADJ_count = 0
 					V_count = 0
-					# for tag in self.tagger.tag(' '.join(sent)):
-					# 	for pair in tag:
-					# 		if pair[1] == 'ADJ':
-					# 			ADJ_count += 1
-					# 		elif pair[1] == 'ADV':
-					# 			ADV_count += 1
-					# 		elif pair[1] == 'N':
-					# 			N_count += 1
-					# 		elif pair[1] == 'V':
-					# 			V_count += 1
+					for tag in self.tagger.tag(' '.join(sent)):
+						for pair in tag:
+							if pair[1] == 'ADJ':
+								ADJ_count += 1
+							elif pair[1] == 'ADV':
+								ADV_count += 1
+							elif pair[1] == 'N':
+								N_count += 1
+							elif pair[1] == 'V':
+								V_count += 1
 					new_sentences[i,self.pos_index:self.pos_index+4] += np.array([N_count,ADV_count,ADJ_count,V_count])
 		if self.verbose: print('%i/%i' % (len(sentences),len(sentences)))
 		return new_sentences
