@@ -8,9 +8,9 @@ import numpy as np
 import nlpnet
 from random import shuffle as shuffle_list
 
-from utils import vectorize
-from model import get_model
-from features import FeatureExtractor
+from sentiment_analysis.classify.utils import vectorize
+from sentiment_analysis.classify.model import get_model
+from sentiment_analysis.classify.features import FeatureExtractor
 
 from sklearn.metrics import f1_score
 from sklearn.metrics import accuracy_score

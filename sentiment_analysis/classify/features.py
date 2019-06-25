@@ -1,5 +1,5 @@
 import numpy as np
-from embedding import Word2Vec
+from sentiment_analysis.classify.embedding import Word2Vec
 import nlpnet
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
@@ -32,7 +32,7 @@ class FeatureExtractor:
 					self.emb_model.load(embedding_file)
 					self.rep_size = self.emb_model.dimensions
 				else:
-					if self.verbose: printl("** No embedding file defined. Am I supposed to guess? **")
+					if self.verbose: print("** No embedding file defined. Am I supposed to guess? **")
 					exit()
 		else:
 			if verbose: print('using representation: ',end='')
