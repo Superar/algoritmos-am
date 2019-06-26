@@ -1,0 +1,810 @@
+python3 classify.py -classifier linearsvm -fold
+classifier: linearsvm
+(10980, 4013)
+model_name: linearsvm
+
+Cross-validation:
+Fold: 1
+Acc: 0.5927
+F1. neg: 0.597 neu: 0.414 pos: 0.690 -> 0.566780
+[[193  70  63]
+ [ 69 115 106]
+ [ 59  81 344]]
+Fold: 2
+Acc: 0.5782
+F1. neg: 0.591 neu: 0.395 pos: 0.671 -> 0.552209
+[[185  67  74]
+ [ 62 110 118]
+ [ 53  90 341]]
+Fold: 3
+Acc: 0.5851
+F1. neg: 0.587 neu: 0.372 pos: 0.702 -> 0.553416
+[[192  71  62]
+ [ 88 102 100]
+ [ 49  86 349]]
+Fold: 4
+Acc: 0.5905
+F1. neg: 0.599 neu: 0.376 pos: 0.703 -> 0.559231
+[[195  77  53]
+ [ 76 103 111]
+ [ 55  78 351]]
+Fold: 5
+Acc: 0.5752
+F1. neg: 0.569 neu: 0.431 pos: 0.660 -> 0.553512
+[[181  63  81]
+ [ 64 121 104]
+ [ 66  88 329]]
+Fold: 6
+Acc: 0.6162
+F1. neg: 0.589 neu: 0.460 pos: 0.726 -> 0.591939
+[[201  72  52]
+ [ 87 128  74]
+ [ 69  67 347]]
+Fold: 7
+Acc: 0.5898
+F1. neg: 0.588 neu: 0.413 pos: 0.693 -> 0.564702
+[[194  68  63]
+ [ 84 116  89]
+ [ 57  89 337]]
+Fold: 8
+Acc: 0.6208
+F1. neg: 0.596 neu: 0.483 pos: 0.718 -> 0.599320
+[[195  66  64]
+ [ 77 138  74]
+ [ 57  78 348]]
+Fold: 9
+Acc: 0.6007
+F1. neg: 0.618 neu: 0.396 pos: 0.699 -> 0.571020
+[[210  58  57]
+ [ 84 105 100]
+ [ 61  78 344]]
+Fold: 10
+Acc: 0.5798
+F1. neg: 0.576 neu: 0.401 pos: 0.681 -> 0.552566
+[[183  66  76]
+ [ 74 111 104]
+ [ 53  88 342]]
+Average Acc: 0.5929
+Average F1. neg: 0.5911 neu: 0.4141 pos: 0.6942 -> 0.566469
+[[192.9, 67.8, 64.5]
+ [76.5, 114.9, 98.0]
+ [57.9, 82.3, 343.2]]
+-------------------------
+Test:
+Acc: 0.6254
+F1. neg: 0.606 neu: 0.460 pos: 0.728 -> 0.598198
+[[350 133 104]
+ [118 234 164]
+
+
+======================================================================================================== // ===============================================================
+
+
+python3 classify.py -classifier nb -fold
+classifier: nb
+(10980, 4013)
+model_name: nb
+
+Cross-validation:
+Fold: 1
+Acc: 0.5518
+F1. neg: 0.541 neu: 0.384 pos: 0.653 -> 0.525923
+[[175  69  82]
+ [ 78 107 105]
+ [ 68  91 325]]
+Fold: 2
+Acc: 0.5909
+F1. neg: 0.557 neu: 0.448 pos: 0.691 -> 0.565632
+[[182  65  79]
+ [ 77 123  90]
+ [ 68  71 345]]
+Fold: 3
+Acc: 0.5587
+F1. neg: 0.544 neu: 0.424 pos: 0.647 -> 0.538501
+[[186  61  78]
+ [ 86 118  86]
+ [ 87  87 310]]
+Fold: 4
+Acc: 0.5778
+F1. neg: 0.543 neu: 0.434 pos: 0.679 -> 0.551663
+[[174  69  82]
+ [ 71 119 100]
+ [ 71  71 342]]
+Fold: 5
+Acc: 0.5652
+F1. neg: 0.543 neu: 0.398 pos: 0.665 -> 0.535336
+[[177  64  84]
+ [ 72 104 113]
+ [ 78  66 339]]
+Fold: 6
+Acc: 0.5953
+F1. neg: 0.586 neu: 0.443 pos: 0.687 -> 0.572021
+[[191  67  67]
+ [ 68 123  98]
+ [ 68  76 339]]
+Fold: 7
+Acc: 0.5752
+F1. neg: 0.556 neu: 0.438 pos: 0.664 -> 0.552552
+[[182  59  84]
+ [ 74 120  95]
+ [ 74  80 329]]
+Fold: 8
+Acc: 0.5852
+F1. neg: 0.545 neu: 0.412 pos: 0.708 -> 0.554727
+[[180  74  71]
+ [ 92 112  85]
+ [ 64  69 350]]
+Fold: 9
+Acc: 0.5825
+F1. neg: 0.547 neu: 0.399 pos: 0.701 -> 0.548839
+[[176  74  75]
+ [ 79 106 104]
+ [ 64  62 357]]
+Fold: 10
+Acc: 0.5670
+F1. neg: 0.513 neu: 0.413 pos: 0.683 -> 0.536584
+[[172  60  93]
+ [ 98 108  83]
+ [ 75  66 342]]
+Average Acc: 0.5750
+Average F1. neg: 0.5474 neu: 0.4193 pos: 0.6778 -> 0.548178
+[[179.5, 66.2, 79.5]
+ [79.5, 114.0, 95.9]
+ [71.7, 73.9, 337.8]]
+-------------------------
+Test:
+Acc: 0.6025
+F1. neg: 0.584 neu: 0.447 pos: 0.698 -> 0.576218
+[[344 113 130]
+ [129 222 165]
+ [119 143 645]]
+
+
+
+========================================================================================= // ===============================================================
+
+
+
+
+python3 classify.py -classifier lr -fold
+classifier: lr
+(10980, 4013)
+model_name: lr
+
+Cross-validation:
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 1
+Acc: 0.6036
+F1. neg: 0.605 neu: 0.404 pos: 0.704 -> 0.571290
+[[187  65  74]
+ [ 61 108 121]
+ [ 44  71 369]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 2
+Acc: 0.6191
+F1. neg: 0.649 neu: 0.408 pos: 0.704 -> 0.587161
+[[214  53  59]
+ [ 61 104 125]
+ [ 58  63 363]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 3
+Acc: 0.6251
+F1. neg: 0.607 neu: 0.455 pos: 0.725 -> 0.595746
+[[199  55  71]
+ [ 78 120  92]
+ [ 54  62 368]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 4
+Acc: 0.6379
+F1. neg: 0.613 neu: 0.433 pos: 0.756 -> 0.600832
+[[190  67  68]
+ [ 76 115  99]
+ [ 29  59 396]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 5
+Acc: 0.6281
+F1. neg: 0.638 neu: 0.454 pos: 0.715 -> 0.602463
+[[210  56  59]
+ [ 67 122 100]
+ [ 56  70 357]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 6
+Acc: 0.6171
+F1. neg: 0.625 neu: 0.409 pos: 0.720 -> 0.584693
+[[207  60  58]
+ [ 77 107 105]
+ [ 53  67 363]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 7
+Acc: 0.6253
+F1. neg: 0.604 neu: 0.483 pos: 0.717 -> 0.600983
+[[188  61  76]
+ [ 62 134  93]
+ [ 48  71 364]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 8
+Acc: 0.5989
+F1. neg: 0.590 neu: 0.403 pos: 0.708 -> 0.566884
+[[189  64  72]
+ [ 79 108 102]
+ [ 48  75 360]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 9
+Acc: 0.6299
+F1. neg: 0.638 neu: 0.438 pos: 0.723 -> 0.599394
+[[207  55  63]
+ [ 67 114 108]
+ [ 50  63 370]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 10
+Acc: 0.6098
+F1. neg: 0.610 neu: 0.413 pos: 0.707 -> 0.576571
+[[204  55  66]
+ [ 74 104 111]
+ [ 66  56 361]]
+Average Acc: 0.6195
+Average F1. neg: 0.6179 neu: 0.4301 pos: 0.7178 -> 0.588602
+[[199.5, 59.1, 66.6]
+ [70.2, 113.6, 105.6]
+ [50.6, 65.7, 367.1]]
+-------------------------
+Test:
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Acc: 0.6632
+F1. neg: 0.654 neu: 0.490 pos: 0.758 -> 0.633587
+[[384 105  98]
+ [115 235 166]
+
+
+
+
+ ================================================================================= / / ================================================================================
+
+
+
+python3 classify.py -classifier randfor -fold
+classifier: randfor
+(10980, 4013)
+model_name: randfor
+
+Cross-validation:
+Fold: 1
+Acc: 0.6036
+F1. neg: 0.582 neu: 0.353 pos: 0.723 -> 0.553150
+[[203  43  80]
+ [101  79 110]
+ [ 67  35 382]]
+Fold: 2
+Acc: 0.6255
+F1. neg: 0.649 neu: 0.366 pos: 0.722 -> 0.578919
+[[217  36  73]
+ [ 78  84 128]
+ [ 48  49 387]]
+Fold: 3
+Acc: 0.6206
+F1. neg: 0.635 neu: 0.396 pos: 0.711 -> 0.580541
+[[218  32  75]
+ [ 83  92 115]
+ [ 61  51 372]]
+Fold: 4
+Acc: 0.6460
+F1. neg: 0.643 neu: 0.430 pos: 0.739 -> 0.603872
+[[216  33  76]
+ [ 75  97 118]
+ [ 56  31 397]]
+Fold: 5
+Acc: 0.6308
+F1. neg: 0.638 neu: 0.395 pos: 0.728 -> 0.587119
+[[219  31  75]
+ [ 88  90 111]
+ [ 54  46 383]]
+Fold: 6
+Acc: 0.6162
+F1. neg: 0.618 neu: 0.396 pos: 0.709 -> 0.574102
+[[201  36  88]
+ [ 70  91 128]
+ [ 55  44 384]]
+Fold: 7
+Acc: 0.6408
+F1. neg: 0.626 neu: 0.430 pos: 0.740 -> 0.598738
+[[218  33  74]
+ [ 88  96 105]
+ [ 65  29 389]]
+Fold: 8
+Acc: 0.6299
+F1. neg: 0.634 neu: 0.360 pos: 0.741 -> 0.578533
+[[222  38  65]
+ [ 96  80 113]
+ [ 57  37 389]]
+Fold: 9
+Acc: 0.6299
+F1. neg: 0.619 neu: 0.394 pos: 0.731 -> 0.581126
+[[210  24  91]
+ [ 91  85 113]
+ [ 53  34 396]]
+Fold: 10
+Acc: 0.6317
+F1. neg: 0.645 neu: 0.414 pos: 0.720 -> 0.592934
+[[216  35  74]
+ [ 74  97 118]
+ [ 55  48 380]]
+Average Acc: 0.6275
+Average F1. neg: 0.6289 neu: 0.3933 pos: 0.7266 -> 0.582903
+[[214.0, 34.1, 77.1]
+ [84.4, 89.1, 115.9]
+ [57.1, 40.4, 385.9]]
+-------------------------
+Test:
+Acc: 0.6607
+F1. neg: 0.671 neu: 0.445 pos: 0.746 -> 0.620540
+[[401  58 128]
+ [121 187 208]
+
+
+
+====================================================================================//========================================================================
+
+
+python3 classify.py -classifier mlp -fold
+classifier: mlp
+(10980, 4013)
+model_name: mlp
+
+Cross-validation:
+Fold: 1
+Acc: 0.6373
+F1. neg: 0.640 neu: 0.470 pos: 0.720 -> 0.610022
+[[205  50  71]
+ [ 59 123 108]
+ [ 51  60 373]]
+Fold: 2
+Acc: 0.6118
+F1. neg: 0.614 neu: 0.433 pos: 0.707 -> 0.584673
+[[190  72  64]
+ [ 54 120 116]
+ [ 49  72 363]]
+Fold: 3
+Acc: 0.6351
+F1. neg: 0.637 neu: 0.411 pos: 0.733 -> 0.593685
+[[204  44  77]
+ [ 68  98 124]
+ [ 43  45 396]]
+Fold: 4
+Acc: 0.6297
+F1. neg: 0.627 neu: 0.397 pos: 0.733 -> 0.585919
+[[213  45  67]
+ [ 80  92 118]
+ [ 61  36 387]]
+Fold: 5
+Acc: 0.6418
+F1. neg: 0.619 neu: 0.437 pos: 0.748 -> 0.601310
+[[194  51  80]
+ [ 71 107 111]
+ [ 37  43 403]]
+Fold: 6
+Acc: 0.6190
+F1. neg: 0.643 neu: 0.399 pos: 0.713 -> 0.585089
+[[211  49  65]
+ [ 74 102 113]
+ [ 46  71 366]]
+Fold: 7
+Acc: 0.6345
+F1. neg: 0.620 neu: 0.431 pos: 0.747 -> 0.599327
+[[209  56  60]
+ [ 90 110  89]
+ [ 50  56 377]]
+Fold: 8
+Acc: 0.5998
+F1. neg: 0.616 neu: 0.438 pos: 0.694 -> 0.582817
+[[199  82  44]
+ [ 71 134  84]
+ [ 51 107 325]]
+Fold: 9
+Acc: 0.6509
+F1. neg: 0.656 neu: 0.431 pos: 0.748 -> 0.611604
+[[224  39  62]
+ [ 82 102 105]
+ [ 52  43 388]]
+Fold: 10
+Acc: 0.6299
+F1. neg: 0.626 neu: 0.438 pos: 0.727 -> 0.597073
+[[199  60  66]
+ [ 62 113 114]
+ [ 50  54 379]]
+Average Acc: 0.6290
+Average F1. neg: 0.6299 neu: 0.4286 pos: 0.7270 -> 0.595152
+[[204.8, 54.8, 65.6]
+ [71.1, 110.1, 108.2]
+ [49.0, 58.7, 375.7]]
+-------------------------
+Test:
+Acc: 0.6627
+F1. neg: 0.650 neu: 0.486 pos: 0.749 -> 0.628624
+[[355  84 148]
+ [ 89 222 205]
+
+
+=====================================================================================//=============================================================
+
+
+python3 classify.py -classifier trees -fold
+classifier: trees
+(10980, 4013)
+model_name: trees
+
+Cross-validation:
+Fold: 1
+Acc: 0.5436
+F1. neg: 0.518 neu: 0.412 pos: 0.642 -> 0.524086
+[[175  74  77]
+ [ 89 119  82]
+ [ 86  94 304]]
+Fold: 2
+Acc: 0.5618
+F1. neg: 0.521 neu: 0.433 pos: 0.669 -> 0.540858
+[[165  88  73]
+ [ 74 130  86]
+ [ 69  92 323]]
+Fold: 3
+Acc: 0.5705
+F1. neg: 0.529 neu: 0.433 pos: 0.680 -> 0.547390
+[[172  80  73]
+ [ 82 125  83]
+ [ 71  83 330]]
+Fold: 4
+Acc: 0.5496
+F1. neg: 0.534 neu: 0.357 pos: 0.663 -> 0.517701
+[[170  74  81]
+ [ 78  97 115]
+ [ 64  83 337]]
+Fold: 5
+Acc: 0.5725
+F1. neg: 0.548 neu: 0.413 pos: 0.678 -> 0.546179
+[[187  64  74]
+ [ 92 111  86]
+ [ 79  74 330]]
+Fold: 6
+Acc: 0.5798
+F1. neg: 0.560 neu: 0.456 pos: 0.666 -> 0.560584
+[[183  65  77]
+ [ 72 130  87]
+ [ 74  86 323]]
+Fold: 7
+Acc: 0.5697
+F1. neg: 0.566 neu: 0.399 pos: 0.673 -> 0.546280
+[[180  81  64]
+ [ 72 116 101]
+ [ 59  95 329]]
+Fold: 8
+Acc: 0.5816
+F1. neg: 0.573 neu: 0.436 pos: 0.676 -> 0.561763
+[[188  68  69]
+ [ 82 127  80]
+ [ 61  99 323]]
+Fold: 9
+Acc: 0.5497
+F1. neg: 0.547 neu: 0.375 pos: 0.656 -> 0.525931
+[[175  76  74]
+ [ 83 109  97]
+ [ 57 107 319]]
+Fold: 10
+Acc: 0.5506
+F1. neg: 0.539 neu: 0.368 pos: 0.664 -> 0.523644
+[[179  85  61]
+ [ 82 103 104]
+ [ 78  83 322]]
+Average Acc: 0.5629
+Average F1. neg: 0.5434 neu: 0.4082 pos: 0.6668 -> 0.539442
+[[177.4, 75.5, 72.3]
+ [80.6, 116.7, 92.1]
+ [69.8, 89.6, 324.0]]
+-------------------------
+Test:
+Acc: 0.5701
+F1. neg: 0.542 neu: 0.427 pos: 0.670 -> 0.546629
+[[318 130 139]
+ [138 222 156]
+
+
+
+ ==========================================================================================//=========================================================================
+
+
+
+
+
+python3 classify.py -classifier rbfsvm -fold
+classifier: rbfsvm
+(10980, 4013)
+model_name: rbfsvm
+
+Cross-validation:
+Fold: 1
+Acc: 0.5109
+F1. neg: 0.413 neu: 0.034 pos: 0.646 -> 0.364176
+[[103   0 223]
+ [ 40   5 245]
+ [ 30   0 454]]
+Fold: 2
+Acc: 0.5291
+F1. neg: 0.465 neu: 0.047 pos: 0.658 -> 0.390033
+[[123   0 203]
+ [ 48   7 235]
+ [ 32   0 452]]
+Fold: 3
+Acc: 0.5177
+F1. neg: 0.456 neu: 0.020 pos: 0.650 -> 0.375548
+[[125   0 200]
+ [ 55   3 232]
+ [ 43   0 441]]
+Fold: 4
+Acc: 0.5214
+F1. neg: 0.466 neu: 0.020 pos: 0.650 -> 0.378772
+[[124   0 201]
+ [ 45   3 242]
+ [ 38   0 446]]
+Fold: 5
+Acc: 0.5342
+F1. neg: 0.484 neu: 0.021 pos: 0.664 -> 0.389485
+[[130   0 195]
+ [ 52   3 234]
+ [ 30   0 453]]
+Fold: 6
+Acc: 0.5014
+F1. neg: 0.414 neu: 0.027 pos: 0.635 -> 0.358780
+[[108   0 217]
+ [ 44   4 241]
+ [ 45   0 438]]
+Fold: 7
+Acc: 0.5324
+F1. neg: 0.499 neu: 0.007 pos: 0.658 -> 0.388096
+[[137   0 188]
+ [ 50   1 238]
+ [ 37   0 446]]
+Fold: 8
+Acc: 0.5169
+F1. neg: 0.461 neu: 0.014 pos: 0.646 -> 0.373622
+[[124   0 201]
+ [ 47   2 240]
+ [ 42   0 441]]
+Fold: 9
+Acc: 0.5351
+F1. neg: 0.500 neu: 0.027 pos: 0.660 -> 0.395684
+[[138   0 187]
+ [ 51   4 234]
+ [ 38   0 445]]
+Fold: 10
+Acc: 0.5333
+F1. neg: 0.495 neu: 0.034 pos: 0.656 -> 0.395088
+[[133   0 192]
+ [ 43   5 241]
+ [ 36   0 447]]
+Average Acc: 0.5232
+Average F1. neg: 0.4654 neu: 0.0252 pos: 0.6522 -> 0.380928
+[[124.5, 0.0, 200.7]
+ [47.5, 3.7, 238.2]
+ [37.1, 0.0, 446.3]]
+-------------------------
+Test:
+Acc: 0.5383
+F1. neg: 0.482 neu: 0.027 pos: 0.666 -> 0.391386
+[[232   1 354]
+ [ 80   7 429]
+
+
+========================================================================== // =====================================================================
+
+
+python3 classify.py -classifier bagging -fold
+classifier: bagging
+(10980, 4013)
+model_name: bagging
+
+Cross-validation:
+Fold: 1
+Acc: 0.6282
+F1. neg: 0.629 neu: 0.473 pos: 0.714 -> 0.605402
+[[213  57  56]
+ [ 73 129  88]
+ [ 65  70 349]]
+Fold: 2
+Acc: 0.6218
+F1. neg: 0.637 neu: 0.407 pos: 0.720 -> 0.588097
+[[222  50  54]
+ [ 87 103 100]
+ [ 62  63 359]]
+Fold: 3
+Acc: 0.5951
+F1. neg: 0.576 neu: 0.436 pos: 0.695 -> 0.568819
+[[194  57  74]
+ [ 87 117  86]
+ [ 68  73 343]]
+Fold: 4
+Acc: 0.6160
+F1. neg: 0.618 neu: 0.419 pos: 0.712 -> 0.582902
+[[210  49  66]
+ [ 80 105 105]
+ [ 65  57 362]]
+Fold: 5
+Acc: 0.6117
+F1. neg: 0.621 neu: 0.416 pos: 0.706 -> 0.580977
+[[211  45  69]
+ [ 87 107  95]
+ [ 57  73 353]]
+Fold: 6
+Acc: 0.6108
+F1. neg: 0.630 neu: 0.420 pos: 0.695 -> 0.581866
+[[219  40  66]
+ [ 85 107  97]
+ [ 66  73 344]]
+Fold: 7
+Acc: 0.5953
+F1. neg: 0.629 neu: 0.415 pos: 0.676 -> 0.573495
+[[212  63  50]
+ [ 70 116 103]
+ [ 67  91 325]]
+Fold: 8
+Acc: 0.5980
+F1. neg: 0.583 neu: 0.409 pos: 0.700 -> 0.564315
+[[191  54  80]
+ [ 78 104 107]
+ [ 61  61 361]]
+Fold: 9
+Acc: 0.6381
+F1. neg: 0.632 neu: 0.471 pos: 0.730 -> 0.610820
+[[216  49  60]
+ [ 80 122  87]
+ [ 63  58 362]]
+Fold: 10
+Acc: 0.5889
+F1. neg: 0.592 neu: 0.428 pos: 0.676 -> 0.565450
+[[201  52  72]
+ [ 84 116  89]
+ [ 69  85 329]]
+Average Acc: 0.6104
+Average F1. neg: 0.6146 neu: 0.4295 pos: 0.7025 -> 0.582214
+[[208.9, 51.6, 64.7]
+ [81.1, 112.6, 95.7]
+ [64.3, 70.4, 348.7]]
+-------------------------
+Test:
+Acc: 0.6373
+F1. neg: 0.646 neu: 0.459 pos: 0.721 -> 0.608573
+[[395  81 111]
+ [128 214 174]
+
+
+=============================================================================================//=============================================================
+
+python3 classify.py -classifier xgboost -fold
+classifier: xgboost
+(10980, 4013)
+model_name: xgboost
+
+Cross-validation:
+Fold: 1
+Acc: 0.6236
+F1. neg: 0.619 neu: 0.459 pos: 0.714 -> 0.597546
+[[197  54  75]
+ [ 69 125  96]
+ [ 44  76 364]]
+Fold: 2
+Acc: 0.6045
+F1. neg: 0.596 neu: 0.346 pos: 0.718 -> 0.553340
+[[200  44  82]
+ [ 87  78 125]
+ [ 58  39 387]]
+Fold: 3
+Acc: 0.5924
+F1. neg: 0.578 neu: 0.398 pos: 0.699 -> 0.558519
+[[189  62  74]
+ [ 77 103 110]
+ [ 63  62 359]]
+Fold: 4
+Acc: 0.6078
+F1. neg: 0.610 neu: 0.432 pos: 0.694 -> 0.578605
+[[194  47  84]
+ [ 65 112 113]
+ [ 52  70 362]]
+Fold: 5
+Acc: 0.5971
+F1. neg: 0.606 neu: 0.413 pos: 0.686 -> 0.568504
+[[200  52  73]
+ [ 73 108 108]
+ [ 62  74 347]]
+Fold: 6
+Acc: 0.6135
+F1. neg: 0.620 neu: 0.379 pos: 0.707 -> 0.568911
+[[209  33  83]
+ [ 77  85 127]
+ [ 63  41 379]]
+Fold: 7
+Acc: 0.5843
+F1. neg: 0.561 neu: 0.437 pos: 0.679 -> 0.558951
+[[175  64  86]
+ [ 66 121 102]
+ [ 58  80 345]]
+Fold: 8
+Acc: 0.5734
+F1. neg: 0.585 neu: 0.357 pos: 0.674 -> 0.538716
+[[189  56  80]
+ [ 76  92 121]
+ [ 56  79 348]]
+Fold: 9
+Acc: 0.6044
+F1. neg: 0.606 neu: 0.404 pos: 0.703 -> 0.570860
+[[203  51  71]
+ [ 80 102 107]
+ [ 62  63 358]]
+Fold: 10
+Acc: 0.6144
+F1. neg: 0.617 neu: 0.382 pos: 0.724 -> 0.574363
+[[203  52  70]
+ [ 84  95 110]
+ [ 46  61 376]]
+Average Acc: 0.6015
+Average F1. neg: 0.5999 neu: 0.4007 pos: 0.6999 -> 0.566831
+[[195.9, 51.5, 77.8]
+ [75.4, 102.1, 111.9]
+ [56.4, 64.5, 362.5]]
+-------------------------
+Test:
+Acc: 0.6224
+F1. neg: 0.629 neu: 0.426 pos: 0.712 -> 0.588994
+[[363  87 137]
+ [113 197 206]
