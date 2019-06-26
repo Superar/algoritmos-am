@@ -3,7 +3,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC, LinearSVC
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, BaggingClassifier
+import xgboost as xgb
 
 
 def getOptions(opt_lst):
@@ -114,6 +115,20 @@ def get_model(model_name='', verbose=False, md_options='',classify=False):
 		if 'criterion' in md_options.keys():
 			criterion = md_options['criterion']
 		return RandomForestClassifier(criterion=criterion, n_estimators=estimators, max_depth=max_depth)
+
+	elif model_name.lower() == 'rbfsvm':
+		svm_rbf = SVC(kernel='rbf', gamma='auto')
+		return svm_rbf
+
+	elif model_name.lower() == 'bagging':
+		bagging = BaggingClassifier(base_estimator=DecisionTreeClassifier(),
+									n_estimators=100)
+		return bagging
+
+	elif model_name.lower() == 'xgboost':
+		xgboost = xgb.XGBClassifier()
+		return xgboost
+
 	else:
 		if verbose: print('no classifier given. What do you expect me to do?')
 		exit()

@@ -8,9 +8,15 @@ import numpy as np
 import nlpnet
 from random import shuffle as shuffle_list
 
-from sentiment_analysis.classify.utils import vectorize
-from sentiment_analysis.classify.model import get_model
-from sentiment_analysis.classify.features import FeatureExtractor
+#pra rodar no pycharm
+#from sentiment_analysis.classify.utils import vectorize
+#from sentiment_analysis.classify.model import get_model
+#from sentiment_analysis.classify.features import FeatureExtractor
+
+from utils import vectorize
+from model import get_model
+from features import FeatureExtractor
+
 
 from sklearn.metrics import f1_score
 from sklearn.metrics import accuracy_score
@@ -44,6 +50,9 @@ def help(*args):
 	print(" * 'MLP': Multi-layer Perceptron classifier.")
 	print(" * 'TREES': Decision Tree classifier.")
 	print(" * 'RANDFOR': Random Forest classifier.")
+	print(" * 'RBFSVM': RBF SVM.")
+	print(" * 'Bagging': Bagging Classifier")
+	print(" * 'XGBoost': XGBoost.")
 	print("\n-options <OPYIOND> .... how the data will be represented. Use the following options divided by ','s . Deafult options is everything.")
 	print(" * 'bow': Bag-of-words.")
 	print(" * 'negation': Negation words in the sentence.")
@@ -308,7 +317,7 @@ if __name__ == '__main__':
 			fs = True
 		if sys.argv[i].lower() == '-classifier':
 			classifier = sys.argv[i+1]
-			if classifier not in ['linearsvm', 'polysvm','nb','lr','mlp','trees','randfor']:		# PRA ADD NOVOS CLASSIFICADORES
+			if classifier not in ['linearsvm', 'polysvm','nb','lr','mlp','trees','randfor', 'rbfsvm', 'bagging', 'xgboost']:		# PRA ADD NOVOS CLASSIFICADORES
 				help('not a valid classifier')
 			i += 1
 		if sys.argv[i].lower() == '-options' or sys.argv[i].lower() == '-opt':

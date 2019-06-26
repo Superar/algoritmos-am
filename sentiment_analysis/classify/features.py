@@ -1,5 +1,7 @@
 import numpy as np
-from sentiment_analysis.classify.embedding import Word2Vec
+#from sentiment_analysis.classify.embedding import Word2Vec
+from embedding import Word2Vec
+
 import nlpnet
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
