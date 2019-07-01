@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from matplotlib import pyplot as plt
+from nltk.tokenize import word_tokenize
 from classify import load_data
 from features import FeatureExtractor
 import pandas as pd
@@ -40,9 +41,43 @@ def visualize_tags(data_path, classes):
 
     counts = df.groupby('label').sum()
     counts = counts.div(counts.sum(axis=1), axis=0)
+    counts *= 100
     counts.plot.bar(rot=0)
     plt.xlabel('Class')
-    plt.ylabel('Frequency of PoS tag')
+    plt.ylabel('Frequency of PoS tag (%)')
+    plt.show()
+
+
+def visualize_polarities(data_path, classes, lexicon_path):
+    lexicon = pd.read_csv(lexicon_path, names=['word', 'sentiment'])
+    negative_words = lexicon.loc[lexicon['sentiment'] == -1, 'word']
+    neutral_words = lexicon.loc[lexicon['sentiment'] == 0, 'word']
+    positive_words = lexicon.loc[lexicon['sentiment'] == 1, 'word']
+
+    sents, labels, ids = load_data(data_path)
+
+    polarity_counts = pd.DataFrame(0, index=['negative', 'neutral', 'positive', 'total'],
+                                   columns=classes)
+
+    for i, sent in enumerate(sents):
+        class_ = classes[labels[i]]
+
+        tokens = word_tokenize(sent, language='portuguese')
+        negative_count = len(set(tokens).intersection(set(negative_words)))
+        neutral_count = len(set(tokens).intersection(set(neutral_words)))
+        positive_count = len(set(tokens).intersection(set(positive_words)))
+
+        polarity_counts.loc['negative', class_] += negative_count
+        polarity_counts.loc['neutral', class_] += neutral_count
+        polarity_counts.loc['positive', class_] += positive_count
+        polarity_counts.loc['total', class_] += len(tokens)
+
+    polarity_rates = polarity_counts.div(polarity_counts.loc['total', :])
+    polarity_rates *= 100
+
+    polarity_rates.loc[polarity_rates.index != 'total', :].T.plot.bar(rot=0)
+    plt.xlabel('Class')
+    plt.ylabel('Rate of polarity words (%)')
     plt.show()
 
 
@@ -53,6 +88,7 @@ def main():
 
     visualize_class_balance(data_path, classes)
     visualize_tags(data_path, classes)
+    visualize_polarities(data_path, classes, lexicon_path)
 
 
 if __name__ == "__main__":
