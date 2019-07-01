@@ -81,6 +81,28 @@ def visualize_polarities(data_path, classes, lexicon_path):
     plt.show()
 
 
+def visualize_sentence_length(data_path, classes):
+    sents, labels, ids = load_data(data_path)
+
+    lengths = pd.DataFrame(index=ids,
+                           columns=['label', 'length'])
+
+    for i, sent in enumerate(sents):
+        class_ = classes[labels[i]]
+        lengths.loc[ids[i], 'label'] = class_
+
+        tokens = word_tokenize(sent, language='portuguese')
+        sent_len = len(tokens)
+        lengths.loc[ids[i], 'length'] = sent_len
+
+    lengths.boxplot(column='length', by='label')
+    plt.title('')
+    plt.suptitle('')
+    plt.xlabel('Class')
+    plt.ylabel('Sentence length (tokens)')
+    plt.show()
+
+
 def main():
     data_path = 'data/corpus/trainTT'
     lexicon_path = 'data/resources/sentilex-reduzido.txt'
@@ -89,6 +111,7 @@ def main():
     visualize_class_balance(data_path, classes)
     visualize_tags(data_path, classes)
     visualize_polarities(data_path, classes, lexicon_path)
+    visualize_sentence_length(data_path, classes)
 
 
 if __name__ == "__main__":
