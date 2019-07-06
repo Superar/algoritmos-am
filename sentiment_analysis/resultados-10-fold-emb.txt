@@ -1,0 +1,1639 @@
+=========================================== NB =========================================================
+
+sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier nb -fold -emb /home/sidleal/Downloads/cbow_s50.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: nb
+(10980, 50)
+model_name: nb
+
+Cross-validation:
+Fold: 1
+Acc: 0.4518
+F1. neg: 0.437 neu: 0.233 pos: 0.549 -> 0.406541
+[[159  26 141]
+ [103  49 138]
+ [139  56 289]]
+Fold: 2
+Acc: 0.4791
+F1. neg: 0.434 neu: 0.264 pos: 0.598 -> 0.431586
+[[157  40 129]
+ [110  56 124]
+ [131  39 314]]
+Fold: 3
+Acc: 0.4777
+F1. neg: 0.444 neu: 0.252 pos: 0.594 -> 0.429904
+[[157  39 129]
+ [108  55 127]
+ [118  53 313]]
+Fold: 4
+Acc: 0.4804
+F1. neg: 0.439 neu: 0.277 pos: 0.605 -> 0.440564
+[[150  62 113]
+ [105  68 117]
+ [103  71 310]]
+Fold: 5
+Acc: 0.4722
+F1. neg: 0.467 neu: 0.249 pos: 0.566 -> 0.427625
+[[169  36 120]
+ [ 89  53 147]
+ [140  47 296]]
+Fold: 6
+Acc: 0.4850
+F1. neg: 0.431 neu: 0.268 pos: 0.602 -> 0.433700
+[[151  31 143]
+ [103  55 131]
+ [121  36 326]]
+Fold: 7
+Acc: 0.4950
+F1. neg: 0.450 neu: 0.263 pos: 0.613 -> 0.442240
+[[160  31 134]
+ [108  54 127]
+ [118  36 329]]
+Fold: 8
+Acc: 0.4667
+F1. neg: 0.441 neu: 0.254 pos: 0.571 -> 0.422167
+[[156  30 139]
+ [103  55 131]
+ [123  59 301]]
+Fold: 9
+Acc: 0.5032
+F1. neg: 0.503 neu: 0.264 pos: 0.600 -> 0.455806
+[[182  29 114]
+ [ 97  56 136]
+ [119  50 314]]
+Fold: 10
+Acc: 0.5160
+F1. neg: 0.496 neu: 0.303 pos: 0.616 -> 0.471485
+[[175  31 119]
+ [ 93  65 131]
+ [113  44 326]]
+Average Acc: 0.4827
+Average F1. neg: 0.4543 neu: 0.2627 pos: 0.5915 -> 0.436162
+[[161.6, 35.5, 128.1]
+ [101.9, 56.6, 130.9]
+ [122.5, 49.1, 311.8]]
+-------------------------
+Test:
+Acc: 0.5169
+F1. neg: 0.489 neu: 0.246 pos: 0.634 -> 0.456137
+[[313  57 217]
+ [179  90 247]
+ [201  70 636]]
+
+
+
+ ======================================================================= RBFSVM ======================================================================
+
+
+ sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysisidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysiloads/cbow_s50.txtssify.py -classifier rbfsvm -fold -emb /home/sidleal/Downl
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: rbfsvm
+(10980, 50)
+model_name: rbfsvm
+
+Cross-validation:
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Fold: 1
+Acc: 0.4400
+F1. neg: 0.000 neu: 0.000 pos: 0.611 -> 0.203704
+[[  0   0 326]
+ [  0   0 290]
+ [  0   0 484]]
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Fold: 2
+Acc: 0.4400
+F1. neg: 0.000 neu: 0.000 pos: 0.611 -> 0.203704
+[[  0   0 326]
+ [  0   0 290]
+ [  0   0 484]]
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Fold: 3
+Acc: 0.4404
+F1. neg: 0.000 neu: 0.000 pos: 0.611 -> 0.203832
+[[  0   0 325]
+ [  0   0 290]
+ [  0   0 484]]
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Fold: 4
+Acc: 0.4404
+F1. neg: 0.000 neu: 0.000 pos: 0.611 -> 0.203832
+[[  0   0 325]
+ [  0   0 290]
+ [  0   0 484]]
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Fold: 5
+Acc: 0.4403
+F1. neg: 0.000 neu: 0.000 pos: 0.611 -> 0.203797
+[[  0   0 325]
+ [  0   0 289]
+ [  0   0 483]]
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Fold: 6
+Acc: 0.4403
+F1. neg: 0.000 neu: 0.000 pos: 0.611 -> 0.203797
+[[  0   0 325]
+ [  0   0 289]
+ [  0   0 483]]
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Fold: 7
+Acc: 0.4403
+F1. neg: 0.000 neu: 0.000 pos: 0.611 -> 0.203797
+[[  0   0 325]
+ [  0   0 289]
+ [  0   0 483]]
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Fold: 8
+Acc: 0.4403
+F1. neg: 0.000 neu: 0.000 pos: 0.611 -> 0.203797
+[[  0   0 325]
+ [  0   0 289]
+ [  0   0 483]]
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Fold: 9
+Acc: 0.4403
+F1. neg: 0.000 neu: 0.000 pos: 0.611 -> 0.203797
+[[  0   0 325]
+ [  0   0 289]
+ [  0   0 483]]
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Fold: 10
+Acc: 0.4403
+F1. neg: 0.000 neu: 0.000 pos: 0.611 -> 0.203797
+[[  0   0 325]
+ [  0   0 289]
+ [  0   0 483]]
+Average Acc: 0.4403
+Average F1. neg: 0.0000 neu: 0.0000 pos: 0.6114 -> 0.203786
+[[0.0, 0.0, 325.2]
+ [0.0, 0.0, 289.4]
+ [0.0, 0.0, 483.4]]
+-------------------------
+Test:
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Acc: 0.4512
+F1. neg: 0.000 neu: 0.000 pos: 0.622 -> 0.207291
+[[  0   0 587]
+ [  0   0 516]
+
+
+=================================================================== XGBoost =========================================================================
+
+
+idleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier xgboost -fold -emb /home/sidleal/Downloads/cbow_s50.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: xgboost
+(10980, 50)
+model_name: xgboost
+
+Cross-validation:
+Fold: 1
+Acc: 0.5118
+F1. neg: 0.399 neu: 0.303 pos: 0.647 -> 0.449705
+[[117  47 162]
+ [ 77  67 146]
+ [ 67  38 379]]
+Fold: 2
+Acc: 0.5227
+F1. neg: 0.438 neu: 0.278 pos: 0.650 -> 0.455413
+[[132  29 165]
+ [ 81  57 152]
+ [ 64  34 386]]
+Fold: 3
+Acc: 0.5387
+F1. neg: 0.474 neu: 0.324 pos: 0.651 -> 0.483147
+[[142  28 155]
+ [ 72  70 148]
+ [ 60  44 380]]
+Fold: 4
+Acc: 0.5287
+F1. neg: 0.440 neu: 0.282 pos: 0.663 -> 0.461767
+[[129  47 149]
+ [ 74  61 155]
+ [ 58  35 391]]
+Fold: 5
+Acc: 0.5360
+F1. neg: 0.505 neu: 0.311 pos: 0.637 -> 0.484289
+[[155  26 144]
+ [ 66  67 156]
+ [ 68  49 366]]
+Fold: 6
+Acc: 0.5333
+F1. neg: 0.417 neu: 0.316 pos: 0.664 -> 0.465876
+[[120  36 169]
+ [ 73  66 150]
+ [ 57  27 399]]
+Fold: 7
+Acc: 0.5296
+F1. neg: 0.472 neu: 0.287 pos: 0.646 -> 0.468498
+[[140  37 148]
+ [ 63  61 165]
+ [ 65  38 380]]
+Fold: 8
+Acc: 0.5442
+F1. neg: 0.482 neu: 0.336 pos: 0.658 -> 0.491900
+[[142  41 142]
+ [ 65  76 148]
+ [ 57  47 379]]
+Fold: 9
+Acc: 0.5178
+F1. neg: 0.424 neu: 0.300 pos: 0.644 -> 0.455835
+[[125  37 163]
+ [ 73  64 152]
+ [ 67  37 379]]
+Fold: 10
+Acc: 0.4995
+F1. neg: 0.403 neu: 0.265 pos: 0.631 -> 0.433126
+[[116  36 173]
+ [ 74  57 158]
+ [ 60  48 375]]
+Average Acc: 0.5262
+Average F1. neg: 0.4455 neu: 0.3001 pos: 0.6493 -> 0.464955
+[[131.8, 36.4, 157.0]
+ [71.8, 64.6, 153.0]
+ [62.3, 39.7, 381.4]]
+-------------------------
+Test:
+Acc: 0.5517
+F1. neg: 0.432 neu: 0.351 pos: 0.676 -> 0.486722
+[[221  61 305]
+ [120 136 260]
+
+
+
+ ==================================================================================== Bagging ===========================================================
+
+
+ sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier bagging -fold -emb /home/sidleal/Downloads/cbow_s50.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: bagging
+(10980, 50)
+model_name: bagging
+
+Cross-validation:
+Fold: 1
+Acc: 0.5191
+F1. neg: 0.440 neu: 0.322 pos: 0.635 -> 0.465904
+[[135  36 155]
+ [ 73  70 147]
+ [ 79  39 366]]
+Fold: 2
+Acc: 0.5436
+F1. neg: 0.472 neu: 0.357 pos: 0.651 -> 0.493428
+[[140  32 154]
+ [ 63  79 148]
+ [ 64  41 379]]
+Fold: 3
+Acc: 0.5214
+F1. neg: 0.470 neu: 0.290 pos: 0.634 -> 0.464910
+[[145  29 151]
+ [ 75  62 153]
+ [ 72  46 366]]
+Fold: 4
+Acc: 0.5369
+F1. neg: 0.492 neu: 0.287 pos: 0.656 -> 0.478243
+[[157  38 130]
+ [ 80  61 149]
+ [ 76  36 372]]
+Fold: 5
+Acc: 0.5096
+F1. neg: 0.461 neu: 0.271 pos: 0.627 -> 0.453029
+[[139  47 139]
+ [ 63  60 166]
+ [ 76  47 360]]
+Fold: 6
+Acc: 0.5214
+F1. neg: 0.431 neu: 0.336 pos: 0.642 -> 0.469525
+[[132  37 156]
+ [ 79  74 136]
+ [ 77  40 366]]
+Fold: 7
+Acc: 0.5087
+F1. neg: 0.428 neu: 0.309 pos: 0.628 -> 0.455050
+[[130  37 158]
+ [ 75  68 146]
+ [ 77  46 360]]
+Fold: 8
+Acc: 0.5205
+F1. neg: 0.439 neu: 0.331 pos: 0.637 -> 0.469098
+[[136  33 156]
+ [ 79  72 138]
+ [ 79  41 363]]
+Fold: 9
+Acc: 0.5123
+F1. neg: 0.421 neu: 0.307 pos: 0.635 -> 0.454316
+[[128  36 161]
+ [ 74  65 150]
+ [ 81  33 369]]
+Fold: 10
+Acc: 0.5187
+F1. neg: 0.443 neu: 0.328 pos: 0.626 -> 0.465556
+[[133  29 163]
+ [ 61  69 159]
+ [ 82  34 367]]
+Average Acc: 0.5212
+Average F1. neg: 0.4498 neu: 0.3139 pos: 0.6370 -> 0.466906
+[[137.5, 35.4, 152.3]
+ [72.2, 68.0, 149.2]
+ [76.3, 40.3, 366.8]]
+-------------------------
+Test:
+Acc: 0.5537
+F1. neg: 0.451 neu: 0.377 pos: 0.670 -> 0.499541
+[[244  56 287]
+ [133 149 234]
+
+
+
+
+
+========================================================================================= RAND FOR =======================================================================================
+
+sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier randfor -fold -emb /home/sidleal/Downloads/cbow_s50.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: randfor
+(10980, 50)
+model_name: randfor
+
+Cross-validation:
+Fold: 1
+Acc: 0.5264
+F1. neg: 0.425 neu: 0.305 pos: 0.649 -> 0.459952
+[[124  29 173]
+ [ 67  62 161]
+ [ 66  25 393]]
+Fold: 2
+Acc: 0.5318
+F1. neg: 0.459 neu: 0.245 pos: 0.656 -> 0.453227
+[[138  19 169]
+ [ 75  46 169]
+ [ 62  21 401]]
+Fold: 3
+Acc: 0.5268
+F1. neg: 0.451 neu: 0.251 pos: 0.648 -> 0.449966
+[[131  19 175]
+ [ 67  48 175]
+ [ 58  26 400]]
+Fold: 4
+Acc: 0.5278
+F1. neg: 0.437 neu: 0.258 pos: 0.655 -> 0.449900
+[[129  18 178]
+ [ 78  49 163]
+ [ 59  23 402]]
+Fold: 5
+Acc: 0.5114
+F1. neg: 0.423 neu: 0.235 pos: 0.639 -> 0.432146
+[[122  23 180]
+ [ 67  45 177]
+ [ 63  26 394]]
+Fold: 6
+Acc: 0.5488
+F1. neg: 0.466 neu: 0.268 pos: 0.669 -> 0.467782
+[[135  12 178]
+ [ 70  49 170]
+ [ 50  15 418]]
+Fold: 7
+Acc: 0.5214
+F1. neg: 0.447 neu: 0.264 pos: 0.642 -> 0.451028
+[[136  22 167]
+ [ 74  51 164]
+ [ 74  24 385]]
+Fold: 8
+Acc: 0.5369
+F1. neg: 0.449 neu: 0.283 pos: 0.660 -> 0.463615
+[[133  18 174]
+ [ 75  54 160]
+ [ 60  21 402]]
+Fold: 9
+Acc: 0.5287
+F1. neg: 0.437 neu: 0.305 pos: 0.642 -> 0.461309
+[[126  18 181]
+ [ 59  59 171]
+ [ 67  21 395]]
+Fold: 10
+Acc: 0.5077
+F1. neg: 0.415 neu: 0.262 pos: 0.631 -> 0.435945
+[[119  23 183]
+ [ 66  52 171]
+ [ 64  33 386]]
+Average Acc: 0.5268
+Average F1. neg: 0.4407 neu: 0.2676 pos: 0.6492 -> 0.452487
+[[129.3, 20.1, 175.8]
+ [69.8, 51.5, 168.1]
+ [62.3, 23.5, 397.6]]
+-------------------------
+Test:
+Acc: 0.5493
+F1. neg: 0.433 neu: 0.304 pos: 0.673 -> 0.470283
+[[220  32 335]
+ [117 105 294]
+
+
+
+ ========================================================================================== TREES ==========================================================================
+
+ sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier trees -fold -emb /home/sidleal/Downloads/cbow_s50.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: trees
+(10980, 50)
+model_name: trees
+
+Cross-validation:
+Fold: 1
+Acc: 0.4082
+F1. neg: 0.360 neu: 0.341 pos: 0.484 -> 0.395041
+[[123  84 119]
+ [ 81  98 111]
+ [153 103 228]]
+Fold: 2
+Acc: 0.4236
+F1. neg: 0.353 neu: 0.346 pos: 0.518 -> 0.405436
+[[115  79 132]
+ [ 87 100 103]
+ [124 109 251]]
+Fold: 3
+Acc: 0.3976
+F1. neg: 0.324 neu: 0.304 pos: 0.499 -> 0.375759
+[[102  89 134]
+ [ 78  88 124]
+ [125 112 247]]
+Fold: 4
+Acc: 0.4040
+F1. neg: 0.319 neu: 0.339 pos: 0.503 -> 0.386775
+[[105  95 125]
+ [ 85  99 106]
+ [144 100 240]]
+Fold: 5
+Acc: 0.4303
+F1. neg: 0.361 neu: 0.375 pos: 0.512 -> 0.416094
+[[116  80 129]
+ [ 82 113  94]
+ [119 121 243]]
+Fold: 6
+Acc: 0.4348
+F1. neg: 0.412 neu: 0.326 pos: 0.518 -> 0.418695
+[[135  80 110]
+ [ 82  96 111]
+ [113 124 246]]
+Fold: 7
+Acc: 0.4357
+F1. neg: 0.391 neu: 0.310 pos: 0.539 -> 0.413448
+[[126  82 117]
+ [ 87  89 113]
+ [106 114 263]]
+Fold: 8
+Acc: 0.3993
+F1. neg: 0.340 neu: 0.269 pos: 0.519 -> 0.375982
+[[110 102 113]
+ [ 95  79 115]
+ [117 117 249]]
+Fold: 9
+Acc: 0.4348
+F1. neg: 0.386 neu: 0.336 pos: 0.529 -> 0.416724
+[[129  77 119]
+ [ 94  96  99]
+ [121 110 252]]
+Fold: 10
+Acc: 0.4075
+F1. neg: 0.346 neu: 0.314 pos: 0.510 -> 0.389613
+[[111  99 115]
+ [ 87  95 107]
+ [119 123 241]]
+Average Acc: 0.4176
+Average F1. neg: 0.3592 neu: 0.3259 pos: 0.5130 -> 0.399356
+[[117.2, 86.7, 121.3]
+ [85.8, 95.3, 108.3]
+ [124.1, 113.3, 246.0]]
+-------------------------
+Test:
+Acc: 0.4199
+F1. neg: 0.360 neu: 0.342 pos: 0.506 -> 0.402226
+[[210 149 228]
+ [131 181 204]
+
+
+
+
+======================================================================================== MLP =========================================================
+
+
+sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier mlp -fold -emb /home/sidleal/Downloads/cbow_s50.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: mlp
+(10980, 50)
+model_name: mlp
+
+Cross-validation:
+Fold: 1
+Acc: 0.5064
+F1. neg: 0.459 neu: 0.274 pos: 0.627 -> 0.453163
+[[147  45 134]
+ [ 82  61 147]
+ [ 85  50 349]]
+Fold: 2
+Acc: 0.5182
+F1. neg: 0.439 neu: 0.249 pos: 0.652 -> 0.446698
+[[130  40 156]
+ [ 76  52 162]
+ [ 60  36 388]]
+Fold: 3
+Acc: 0.5250
+F1. neg: 0.471 neu: 0.343 pos: 0.631 -> 0.481656
+[[160  29 136]
+ [ 92  74 124]
+ [102  39 343]]
+Fold: 4
+Acc: 0.5305
+F1. neg: 0.491 neu: 0.280 pos: 0.647 -> 0.472584
+[[155  36 134]
+ [ 78  60 152]
+ [ 73  43 368]]
+Fold: 5
+Acc: 0.5415
+F1. neg: 0.477 neu: 0.387 pos: 0.651 -> 0.504966
+[[144  52 129]
+ [ 74  99 116]
+ [ 61  71 351]]
+Fold: 6
+Acc: 0.5488
+F1. neg: 0.495 neu: 0.388 pos: 0.657 -> 0.513291
+[[157  63 105]
+ [ 68  97 124]
+ [ 84  51 348]]
+Fold: 7
+Acc: 0.5242
+F1. neg: 0.458 neu: 0.305 pos: 0.646 -> 0.469642
+[[135  50 140]
+ [ 67  70 152]
+ [ 63  50 370]]
+Fold: 8
+Acc: 0.5232
+F1. neg: 0.480 neu: 0.260 pos: 0.643 -> 0.461012
+[[157  31 137]
+ [ 88  53 148]
+ [ 84  35 364]]
+Fold: 9
+Acc: 0.5442
+F1. neg: 0.486 neu: 0.346 pos: 0.663 -> 0.498446
+[[162  39 124]
+ [ 98  78 113]
+ [ 81  45 357]]
+Fold: 10
+Acc: 0.5269
+F1. neg: 0.457 neu: 0.276 pos: 0.656 -> 0.462765
+[[141  33 151]
+ [ 88  58 143]
+ [ 63  41 379]]
+Average Acc: 0.5289
+Average F1. neg: 0.4715 neu: 0.3106 pos: 0.6472 -> 0.476422
+[[148.8, 41.8, 134.6]
+ [81.1, 70.2, 138.1]
+ [75.6, 46.1, 361.7]]
+-------------------------
+Test:
+Acc: 0.5428
+F1. neg: 0.456 neu: 0.344 pos: 0.667 -> 0.489085
+[[250  85 252]
+ [138 143 235]
+
+
+ =====================================================================================  LinearSVM ===================================================
+
+sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysisidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysiownloads/cbow_s50.txtfy.py -classifier linearsvm -fold -emb /home/sidleal/Do
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: linearsvm
+(10980, 50)
+model_name: linearsvm
+
+Cross-validation:
+Fold: 1
+Acc: 0.5118
+F1. neg: 0.402 neu: 0.238 pos: 0.645 -> 0.428546
+[[110  29 187]
+ [ 62  47 181]
+ [ 49  29 406]]
+Fold: 2
+Acc: 0.5345
+F1. neg: 0.482 neu: 0.232 pos: 0.657 -> 0.457004
+[[139  32 155]
+ [ 59  46 185]
+ [ 53  28 403]]
+Fold: 3
+Acc: 0.5259
+F1. neg: 0.434 neu: 0.230 pos: 0.657 -> 0.440278
+[[121  24 180]
+ [ 65  44 181]
+ [ 46  25 413]]
+Fold: 4
+Acc: 0.5232
+F1. neg: 0.476 neu: 0.218 pos: 0.640 -> 0.444599
+[[142  17 166]
+ [ 66  41 183]
+ [ 64  28 392]]
+Fold: 5
+Acc: 0.4995
+F1. neg: 0.384 neu: 0.226 pos: 0.635 -> 0.414860
+[[108  24 193]
+ [ 69  43 177]
+ [ 61  25 397]]
+Fold: 6
+Acc: 0.5205
+F1. neg: 0.409 neu: 0.240 pos: 0.653 -> 0.434086
+[[117  18 190]
+ [ 73  44 172]
+ [ 57  16 410]]
+Fold: 7
+Acc: 0.5232
+F1. neg: 0.449 neu: 0.228 pos: 0.653 -> 0.443385
+[[137  25 163]
+ [ 79  43 167]
+ [ 69  20 394]]
+Fold: 8
+Acc: 0.5287
+F1. neg: 0.421 neu: 0.228 pos: 0.667 -> 0.438737
+[[118  24 183]
+ [ 74  43 172]
+ [ 43  21 419]]
+Fold: 9
+Acc: 0.5333
+F1. neg: 0.496 neu: 0.220 pos: 0.649 -> 0.455146
+[[147  18 160]
+ [ 66  42 181]
+ [ 55  32 396]]
+Fold: 10
+Acc: 0.5114
+F1. neg: 0.436 neu: 0.203 pos: 0.642 -> 0.426904
+[[129  18 178]
+ [ 78  38 173]
+ [ 60  29 394]]
+Average Acc: 0.5212
+Average F1. neg: 0.4389 neu: 0.2264 pos: 0.6498 -> 0.438355
+[[126.8, 22.9, 175.5]
+ [69.1, 43.1, 177.2]
+ [55.7, 25.3, 402.4]]
+-------------------------
+Test:
+Acc: 0.5199
+F1. neg: 0.421 neu: 0.212 pos: 0.655 -> 0.429498
+[[215  45 327]
+ [123  73 320]
+
+
+
+============================================================================== Log Regr ===============================================
+
+
+sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier lr -fold -emb /home/sidleal/Downloads/cbow_s50.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: lr
+(10980, 50)
+model_name: lr
+
+Cross-validation:
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 1
+Acc: 0.4882
+F1. neg: 0.256 neu: 0.109 pos: 0.637 -> 0.334187
+[[ 55   1 270]
+ [ 33  17 240]
+ [ 16   3 465]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 2
+Acc: 0.4691
+F1. neg: 0.224 neu: 0.059 pos: 0.623 -> 0.302146
+[[ 47   1 278]
+ [ 26   9 255]
+ [ 20   4 460]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 3
+Acc: 0.4877
+F1. neg: 0.296 neu: 0.065 pos: 0.635 -> 0.332012
+[[ 65   3 257]
+ [ 29  10 251]
+ [ 20   3 461]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 4
+Acc: 0.4668
+F1. neg: 0.230 neu: 0.046 pos: 0.625 -> 0.300375
+[[ 50   1 274]
+ [ 37   7 246]
+ [ 22   6 456]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 5
+Acc: 0.4795
+F1. neg: 0.271 neu: 0.033 pos: 0.635 -> 0.313380
+[[ 60   2 263]
+ [ 40   5 244]
+ [ 17   5 461]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 6
+Acc: 0.4676
+F1. neg: 0.244 neu: 0.046 pos: 0.619 -> 0.303287
+[[ 52   2 271]
+ [ 24   7 258]
+ [ 25   4 454]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 7
+Acc: 0.4731
+F1. neg: 0.242 neu: 0.072 pos: 0.625 -> 0.313026
+[[ 52   2 271]
+ [ 29  11 249]
+ [ 24   3 456]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 8
+Acc: 0.4676
+F1. neg: 0.253 neu: 0.045 pos: 0.625 -> 0.307755
+[[ 56   4 265]
+ [ 40   7 242]
+ [ 21  12 450]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 9
+Acc: 0.4686
+F1. neg: 0.248 neu: 0.058 pos: 0.622 -> 0.309532
+[[ 54   3 268]
+ [ 32   9 248]
+ [ 24   8 451]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 10
+Acc: 0.4777
+F1. neg: 0.241 neu: 0.084 pos: 0.633 -> 0.319003
+[[ 52   3 270]
+ [ 37  13 239]
+ [ 18   6 459]]
+Average Acc: 0.4746
+Average F1. neg: 0.2507 neu: 0.0618 pos: 0.6279 -> 0.313470
+[[54.3, 2.2, 268.7]
+ [32.7, 9.5, 247.2]
+ [20.7, 5.4, 457.3]]
+-------------------------
+Test:
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Acc: 0.4831
+F1. neg: 0.218 neu: 0.061 pos: 0.644 -> 0.307833
+[[ 83  13 491]
+ [ 63  17 436]
+ [ 28   8 871]]
+
+
+
+ ====================================================================================================================================================================
+
+ ====================================================================================================================================================================
+ ====================================================================================================================================================================
+ ====================================================================================================================================================================
+ ====================================================================================================================================================================
+ ====================================================================================================================================================================
+ ====================================================================================================================================================================
+ ====================================================================================================================================================================
+ ====================================================================================================================================================================
+
+
+
+COM 300:
+
+
+
+
+============================================== LR ============================================
+
+
+sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier lr -fold -emb /home/sidleal/Downloads/cbow_s300.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: lr
+(10980, 300)
+model_name: lr
+
+Cross-validation:
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 1
+Acc: 0.5145
+F1. neg: 0.405 neu: 0.106 pos: 0.655 -> 0.388569
+[[107   7 212]
+ [ 61  17 212]
+ [ 34   8 442]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 2
+Acc: 0.5045
+F1. neg: 0.377 neu: 0.101 pos: 0.646 -> 0.374702
+[[ 97   7 222]
+ [ 53  16 221]
+ [ 38   4 442]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 3
+Acc: 0.5350
+F1. neg: 0.440 neu: 0.134 pos: 0.669 -> 0.414342
+[[114  11 200]
+ [ 53  22 215]
+ [ 26   6 452]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 4
+Acc: 0.5259
+F1. neg: 0.446 neu: 0.110 pos: 0.658 -> 0.404563
+[[116   9 200]
+ [ 50  18 222]
+ [ 29  11 444]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 5
+Acc: 0.5351
+F1. neg: 0.440 neu: 0.122 pos: 0.668 -> 0.410160
+[[109  13 203]
+ [ 42  20 227]
+ [ 19   6 458]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 6
+Acc: 0.5068
+F1. neg: 0.411 neu: 0.098 pos: 0.644 -> 0.384575
+[[109  10 206]
+ [ 55  16 218]
+ [ 41  11 431]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 7
+Acc: 0.5214
+F1. neg: 0.393 neu: 0.142 pos: 0.659 -> 0.397897
+[[ 99   6 220]
+ [ 53  23 213]
+ [ 27   6 450]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 8
+Acc: 0.5178
+F1. neg: 0.423 neu: 0.100 pos: 0.652 -> 0.391930
+[[110   3 212]
+ [ 55  16 218]
+ [ 30  11 442]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 9
+Acc: 0.5260
+F1. neg: 0.416 neu: 0.167 pos: 0.657 -> 0.413211
+[[106   9 210]
+ [ 48  28 213]
+ [ 31   9 443]]
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Fold: 10
+Acc: 0.5260
+F1. neg: 0.443 neu: 0.120 pos: 0.655 -> 0.406100
+[[119   3 203]
+ [ 55  19 215]
+ [ 38   6 439]]
+Average Acc: 0.5213
+Average F1. neg: 0.4196 neu: 0.1199 pos: 0.6563 -> 0.398605
+[[108.6, 7.8, 208.8]
+ [52.5, 19.5, 217.4]
+ [31.3, 7.8, 444.3]]
+-------------------------
+Test:
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:469: FutureWarning: Default multi_class will be changed to 'auto' in 0.22. Specify the multi_class option to silence this warning.
+  "this warning.", FutureWarning)
+/usr/local/lib/python3.6/dist-packages/sklearn/linear_model/logistic.py:1544: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 8.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+Acc: 0.5284
+F1. neg: 0.412 neu: 0.130 pos: 0.664 -> 0.401951
+[[190  17 380]
+ [ 87  38 391]
+
+
+
+
+ ========================================================================== Linear SVM ===============================================
+
+
+ sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier linearsvm -fold -emb /home/sidleal/Downloads/cbow_s300.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: linearsvm
+(10980, 300)
+model_name: linearsvm
+
+Cross-validation:
+Fold: 1
+Acc: 0.5836
+F1. neg: 0.538 neu: 0.331 pos: 0.700 -> 0.523019
+[[166  35 125]
+ [ 75  70 145]
+ [ 50  28 406]]
+Fold: 2
+Acc: 0.5918
+F1. neg: 0.604 neu: 0.308 pos: 0.695 -> 0.535658
+[[194  32 100]
+ [ 74  67 149]
+ [ 48  46 390]]
+Fold: 3
+Acc: 0.5705
+F1. neg: 0.540 neu: 0.341 pos: 0.673 -> 0.517928
+[[172  26 127]
+ [ 73  72 145]
+ [ 67  34 383]]
+Fold: 4
+Acc: 0.5696
+F1. neg: 0.512 neu: 0.326 pos: 0.687 -> 0.508489
+[[148  42 135]
+ [ 60  71 159]
+ [ 45  32 407]]
+Fold: 5
+Acc: 0.5843
+F1. neg: 0.573 neu: 0.328 pos: 0.687 -> 0.529244
+[[175  30 120]
+ [ 66  71 152]
+ [ 45  43 395]]
+Fold: 6
+Acc: 0.5798
+F1. neg: 0.523 neu: 0.341 pos: 0.697 -> 0.520656
+[[162  34 129]
+ [ 78  72 139]
+ [ 54  27 402]]
+Fold: 7
+Acc: 0.5871
+F1. neg: 0.561 neu: 0.292 pos: 0.705 -> 0.519157
+[[178  27 120]
+ [ 85  59 145]
+ [ 47  29 407]]
+Fold: 8
+Acc: 0.5679
+F1. neg: 0.513 neu: 0.312 pos: 0.692 -> 0.505568
+[[163  26 136]
+ [ 97  65 127]
+ [ 51  37 395]]
+Fold: 9
+Acc: 0.5624
+F1. neg: 0.531 neu: 0.321 pos: 0.667 -> 0.506403
+[[166  33 126]
+ [ 63  67 159]
+ [ 71  28 384]]
+Fold: 10
+Acc: 0.5661
+F1. neg: 0.514 neu: 0.294 pos: 0.693 -> 0.500086
+[[157  43 125]
+ [ 76  62 151]
+ [ 53  28 402]]
+Average Acc: 0.5763
+Average F1. neg: 0.5409 neu: 0.3195 pos: 0.6895 -> 0.516621
+[[168.1, 32.8, 124.3]
+ [74.7, 67.6, 147.1]
+ [53.1, 33.2, 397.1]]
+-------------------------
+Test:
+Acc: 0.5900
+F1. neg: 0.538 neu: 0.330 pos: 0.710 -> 0.526121
+[[305  63 219]
+ [144 125 247]
+ [ 98  53 756]]
+
+
+
+
+========================================================= TREES ==================================================================
+
+
+
+sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier trees -fold -emb /home/sidleal/Downloads/cbow_s300.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: trees
+(10980, 300)
+model_name: trees
+
+Cross-validation:
+Fold: 1
+Acc: 0.4109
+F1. neg: 0.370 neu: 0.294 pos: 0.509 -> 0.391291
+[[119  92 115]
+ [ 82  87 121]
+ [116 122 246]]
+Fold: 2
+Acc: 0.4200
+F1. neg: 0.361 neu: 0.326 pos: 0.522 -> 0.403170
+[[120 101 105]
+ [ 91  98 101]
+ [127 113 244]]
+Fold: 3
+Acc: 0.4440
+F1. neg: 0.404 neu: 0.313 pos: 0.554 -> 0.423708
+[[139  90  96]
+ [104  90  96]
+ [120 105 259]]
+Fold: 4
+Acc: 0.4386
+F1. neg: 0.410 neu: 0.341 pos: 0.518 -> 0.422947
+[[128  79 118]
+ [ 70 103 117]
+ [101 132 251]]
+Fold: 5
+Acc: 0.4002
+F1. neg: 0.325 neu: 0.324 pos: 0.499 -> 0.382787
+[[109  83 133]
+ [ 99  93  97]
+ [137 109 237]]
+Fold: 6
+Acc: 0.4394
+F1. neg: 0.421 neu: 0.328 pos: 0.524 -> 0.424258
+[[142  82 101]
+ [ 91  97 101]
+ [116 124 243]]
+Fold: 7
+Acc: 0.4257
+F1. neg: 0.353 neu: 0.345 pos: 0.524 -> 0.407207
+[[113  93 119]
+ [ 80 102 107]
+ [123 108 252]]
+Fold: 8
+Acc: 0.3920
+F1. neg: 0.320 neu: 0.294 pos: 0.508 -> 0.373956
+[[105 118 102]
+ [ 94  90 105]
+ [132 116 235]]
+Fold: 9
+Acc: 0.4348
+F1. neg: 0.403 neu: 0.319 pos: 0.530 -> 0.417334
+[[134  80 111]
+ [ 99  94  96]
+ [107 127 249]]
+Fold: 10
+Acc: 0.4512
+F1. neg: 0.413 neu: 0.374 pos: 0.529 -> 0.438476
+[[142  82 101]
+ [ 85 109  95]
+ [136 103 244]]
+Average Acc: 0.4257
+Average F1. neg: 0.3781 neu: 0.3257 pos: 0.5218 -> 0.408514
+[[125.1, 90.0, 110.1]
+ [89.5, 96.3, 103.6]
+ [121.5, 115.9, 246.0]]
+-------------------------
+Test:
+Acc: 0.4493
+F1. neg: 0.386 neu: 0.356 pos: 0.546 -> 0.429223
+[[229 156 202]
+ [140 186 190]
+ [232 187 488]]
+
+
+
+
+ ============================================================== MLP ===================================================================
+
+sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier mlp -fold -emb /home/sidleal/Downloads/cbow_s300.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: mlp
+(10980, 300)
+model_name: mlp
+
+Cross-validation:
+Fold: 1
+Acc: 0.5791
+F1. neg: 0.555 neu: 0.379 pos: 0.680 -> 0.537876
+[[178  38 110]
+ [ 76  89 125]
+ [ 61  53 370]]
+Fold: 2
+Acc: 0.5709
+F1. neg: 0.564 neu: 0.371 pos: 0.673 -> 0.536205
+[[195  53  78]
+ [ 88  92 110]
+ [ 82  61 341]]
+Fold: 3
+Acc: 0.5751
+F1. neg: 0.538 neu: 0.390 pos: 0.678 -> 0.535492
+[[166  45 114]
+ [ 70  95 125]
+ [ 56  57 371]]
+Fold: 4
+Acc: 0.5887
+F1. neg: 0.588 neu: 0.365 pos: 0.685 -> 0.546223
+[[197  33  95]
+ [ 83  84 123]
+ [ 65  53 366]]
+Fold: 5
+Acc: 0.5816
+F1. neg: 0.546 neu: 0.333 pos: 0.698 -> 0.525824
+[[168  43 114]
+ [ 73  74 142]
+ [ 49  38 396]]
+Fold: 6
+Acc: 0.6108
+F1. neg: 0.556 neu: 0.480 pos: 0.706 -> 0.580928
+[[165  59 101]
+ [ 54 128 107]
+ [ 49  57 377]]
+Fold: 7
+Acc: 0.5852
+F1. neg: 0.552 neu: 0.360 pos: 0.701 -> 0.538005
+[[174  52  99]
+ [ 77  85 127]
+ [ 54  46 383]]
+Fold: 8
+Acc: 0.5697
+F1. neg: 0.539 neu: 0.406 pos: 0.672 -> 0.539045
+[[171  57  97]
+ [ 77 107 105]
+ [ 62  74 347]]
+Fold: 9
+Acc: 0.5943
+F1. neg: 0.585 neu: 0.405 pos: 0.695 -> 0.561550
+[[194  55  76]
+ [ 78 103 108]
+ [ 66  62 355]]
+Fold: 10
+Acc: 0.5752
+F1. neg: 0.522 neu: 0.402 pos: 0.686 -> 0.536719
+[[169  51 105]
+ [ 81  97 111]
+ [ 72  46 365]]
+Average Acc: 0.5831
+Average F1. neg: 0.5547 neu: 0.3891 pos: 0.6875 -> 0.543787
+[[177.7, 48.6, 98.9]
+ [75.7, 95.4, 118.3]
+ [61.6, 54.7, 367.1]]
+-------------------------
+Test:
+Acc: 0.6040
+F1. neg: 0.571 neu: 0.406 pos: 0.712 -> 0.563025
+[[342  85 160]
+ [147 176 193]
+ [122  89 696]]
+
+
+
+===================================================================== RANDFOR =============================================================
+
+
+sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier randfor -fold -emb /home/sidleal/Downloads/cbow_s300.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: randfor
+(10980, 300)
+model_name: randfor
+
+Cross-validation:
+Fold: 1
+Acc: 0.5291
+F1. neg: 0.452 neu: 0.243 pos: 0.644 -> 0.446417
+[[127  12 187]
+ [ 52  44 194]
+ [ 57  16 411]]
+Fold: 2
+Acc: 0.5555
+F1. neg: 0.472 neu: 0.301 pos: 0.674 -> 0.482160
+[[139  14 173]
+ [ 73  57 160]
+ [ 51  18 415]]
+Fold: 3
+Acc: 0.5441
+F1. neg: 0.486 neu: 0.224 pos: 0.666 -> 0.458581
+[[143  18 164]
+ [ 68  41 181]
+ [ 53  17 414]]
+Fold: 4
+Acc: 0.5460
+F1. neg: 0.463 neu: 0.275 pos: 0.666 -> 0.468226
+[[133  19 173]
+ [ 64  52 174]
+ [ 52  17 415]]
+Fold: 5
+Acc: 0.5670
+F1. neg: 0.528 neu: 0.246 pos: 0.678 -> 0.484298
+[[158  11 156]
+ [ 65  44 180]
+ [ 50  13 420]]
+Fold: 6
+Acc: 0.5488
+F1. neg: 0.497 neu: 0.264 pos: 0.660 -> 0.473340
+[[151  14 160]
+ [ 65  48 176]
+ [ 67  13 403]]
+Fold: 7
+Acc: 0.5524
+F1. neg: 0.499 neu: 0.245 pos: 0.668 -> 0.470885
+[[146  12 167]
+ [ 67  45 177]
+ [ 47  21 415]]
+Fold: 8
+Acc: 0.5278
+F1. neg: 0.478 neu: 0.207 pos: 0.643 -> 0.442573
+[[140   9 176]
+ [ 63  37 189]
+ [ 58  23 402]]
+Fold: 9
+Acc: 0.5579
+F1. neg: 0.503 neu: 0.239 pos: 0.680 -> 0.474054
+[[150  18 157]
+ [ 73  44 172]
+ [ 48  17 418]]
+Fold: 10
+Acc: 0.5469
+F1. neg: 0.458 neu: 0.249 pos: 0.676 -> 0.460906
+[[135   9 181]
+ [ 85  45 159]
+ [ 45  18 420]]
+Average Acc: 0.5475
+Average F1. neg: 0.4836 neu: 0.2494 pos: 0.6655 -> 0.466144
+[[142.2, 13.6, 169.4]
+ [67.5, 45.7, 176.2]
+ [52.8, 17.3, 413.3]]
+-------------------------
+Test:
+Acc: 0.5701
+F1. neg: 0.486 neu: 0.299 pos: 0.687 -> 0.490661
+[[254  28 305]
+ [114 100 302]
+ [ 90  25 792]]
+
+
+
+ =============================================================================== NB ==============================================================
+
+
+
+ sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier nb -fold -emb /home/sidleal/Downloads/cbow_s300.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: nb
+(10980, 300)
+model_name: nb
+
+Cross-validation:
+Fold: 1
+Acc: 0.5182
+F1. neg: 0.500 neu: 0.394 pos: 0.613 -> 0.502312
+[[181  78  67]
+ [105 114  71]
+ [112  97 275]]
+Fold: 2
+Acc: 0.5327
+F1. neg: 0.518 neu: 0.432 pos: 0.613 -> 0.521148
+[[181  81  64]
+ [ 89 132  69]
+ [103 108 273]]
+Fold: 3
+Acc: 0.5432
+F1. neg: 0.531 neu: 0.424 pos: 0.634 -> 0.529742
+[[188  79  58]
+ [ 99 128  63]
+ [ 96 107 281]]
+Fold: 4
+Acc: 0.5105
+F1. neg: 0.497 neu: 0.348 pos: 0.623 -> 0.489632
+[[184  77  64]
+ [124  98  68]
+ [107  98 279]]
+Fold: 5
+Acc: 0.5214
+F1. neg: 0.520 neu: 0.434 pos: 0.586 -> 0.513293
+[[188  75  62]
+ [ 97 134  58]
+ [113 120 250]]
+Fold: 6
+Acc: 0.4986
+F1. neg: 0.513 neu: 0.357 pos: 0.580 -> 0.483242
+[[185  68  72]
+ [108 104  77]
+ [103 122 258]]
+Fold: 7
+Acc: 0.5041
+F1. neg: 0.500 neu: 0.378 pos: 0.591 -> 0.489934
+[[179  79  67]
+ [103 112  74]
+ [109 112 262]]
+Fold: 8
+Acc: 0.5087
+F1. neg: 0.525 neu: 0.347 pos: 0.601 -> 0.491299
+[[202  71  52]
+ [127  99  63]
+ [115 111 257]]
+Fold: 9
+Acc: 0.5415
+F1. neg: 0.525 neu: 0.432 pos: 0.625 -> 0.527551
+[[194  73  58]
+ [ 98 123  68]
+ [122  84 277]]
+Fold: 10
+Acc: 0.4804
+F1. neg: 0.440 neu: 0.378 pos: 0.581 -> 0.466397
+[[162  88  75]
+ [113 109  67]
+ [136  91 256]]
+Average Acc: 0.5159
+Average F1. neg: 0.5070 neu: 0.3924 pos: 0.6049 -> 0.501455
+[[184.4, 76.9, 63.9]
+ [106.3, 115.3, 67.8]
+ [111.6, 105.0, 266.8]]
+-------------------------
+Test:
+Acc: 0.5353
+F1. neg: 0.513 neu: 0.422 pos: 0.625 -> 0.520339
+[[327 136 124]
+ [174 228 114]
+ [186 200 521]]
+
+
+
+
+========================================================================= Bagging ===============================================================
+
+
+
+
+sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier bagging -fold -emb /home/sidleal/Downloads/cbow_s300.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: bagging
+(10980, 300)
+model_name: bagging
+
+Cross-validation:
+Fold: 1
+Acc: 0.5427
+F1. neg: 0.496 neu: 0.336 pos: 0.651 -> 0.494106
+[[161  37 128]
+ [ 76  73 141]
+ [ 86  35 363]]
+Fold: 2
+Acc: 0.5427
+F1. neg: 0.489 neu: 0.303 pos: 0.661 -> 0.484115
+[[154  32 140]
+ [ 82  64 144]
+ [ 68  37 379]]
+Fold: 3
+Acc: 0.5441
+F1. neg: 0.485 neu: 0.322 pos: 0.663 -> 0.490000
+[[154  33 138]
+ [ 88  70 132]
+ [ 68  42 374]]
+Fold: 4
+Acc: 0.5450
+F1. neg: 0.466 neu: 0.380 pos: 0.651 -> 0.499126
+[[143  33 149]
+ [ 69  84 137]
+ [ 77  35 372]]
+Fold: 5
+Acc: 0.5552
+F1. neg: 0.509 neu: 0.307 pos: 0.671 -> 0.495731
+[[165  25 135]
+ [ 90  63 136]
+ [ 68  34 381]]
+Fold: 6
+Acc: 0.5397
+F1. neg: 0.512 neu: 0.339 pos: 0.633 -> 0.494862
+[[163  26 136]
+ [ 68  74 147]
+ [ 81  47 355]]
+Fold: 7
+Acc: 0.5287
+F1. neg: 0.472 neu: 0.268 pos: 0.653 -> 0.464362
+[[146  36 143]
+ [ 80  56 153]
+ [ 68  37 378]]
+Fold: 8
+Acc: 0.5506
+F1. neg: 0.516 neu: 0.336 pos: 0.649 -> 0.500003
+[[164  22 139]
+ [ 70  70 149]
+ [ 77  36 370]]
+Fold: 9
+Acc: 0.5506
+F1. neg: 0.506 neu: 0.316 pos: 0.665 -> 0.495773
+[[161  36 128]
+ [ 80  68 141]
+ [ 70  38 375]]
+Fold: 10
+Acc: 0.5424
+F1. neg: 0.489 neu: 0.348 pos: 0.648 -> 0.495347
+[[151  32 142]
+ [ 73  78 138]
+ [ 68  49 366]]
+Average Acc: 0.5442
+Average F1. neg: 0.4940 neu: 0.3254 pos: 0.6547 -> 0.491342
+[[156.2, 31.2, 137.8]
+ [77.6, 70.0, 141.8]
+ [73.1, 39.0, 371.3]]
+-------------------------
+Test:
+Acc: 0.5582
+F1. neg: 0.493 neu: 0.320 pos: 0.677 -> 0.496465
+[[280  53 254]
+ [147 120 249]
+ [123  62 722]]
+
+
+
+
+ ======================================================== XGBoost =========================================================================
+
+
+
+ sidleal@sidleal-Nitro-AN515-51:~/sid/usp/algo_am/algoritmos-am/sentiment_analysis/classify$ python3 classify.py -classifier xgboost -fold -emb /home/sidleal/Downloads/cbow_s300.txt
+/usr/local/lib/python3.6/dist-packages/smart_open/smart_open_lib.py:398: UserWarning: This function is deprecated, use smart_open.open instead. See the migration notes for details: https://github.com/RaRe-Technologies/smart_open/blob/master/README.rst#migrating-to-the-new-open-function
+  'See the migration notes for details: %s' % _MIGRATION_NOTES_URL
+classifier: xgboost
+(10980, 300)
+model_name: xgboost
+
+Cross-validation:
+Fold: 1
+Acc: 0.5800
+F1. neg: 0.550 neu: 0.358 pos: 0.678 -> 0.528783
+[[176  20 130]
+ [ 75  75 140]
+ [ 63  34 387]]
+Fold: 2
+Acc: 0.5473
+F1. neg: 0.485 neu: 0.329 pos: 0.666 -> 0.493155
+[[149  38 139]
+ [ 79  73 138]
+ [ 61  43 380]]
+Fold: 3
+Acc: 0.5523
+F1. neg: 0.471 neu: 0.336 pos: 0.672 -> 0.492869
+[[139  32 154]
+ [ 73  72 145]
+ [ 53  35 396]]
+Fold: 4
+Acc: 0.5551
+F1. neg: 0.498 neu: 0.330 pos: 0.675 -> 0.501129
+[[151  47 127]
+ [ 73  75 142]
+ [ 58  42 384]]
+Fold: 5
+Acc: 0.5697
+F1. neg: 0.529 neu: 0.349 pos: 0.677 -> 0.518240
+[[165  35 125]
+ [ 71  76 142]
+ [ 63  36 384]]
+Fold: 6
+Acc: 0.5834
+F1. neg: 0.538 neu: 0.367 pos: 0.695 -> 0.533485
+[[166  43 116]
+ [ 71  83 135]
+ [ 55  37 391]]
+Fold: 7
+Acc: 0.5643
+F1. neg: 0.514 neu: 0.385 pos: 0.661 -> 0.520080
+[[161  27 137]
+ [ 68  84 137]
+ [ 73  36 374]]
+Fold: 8
+Acc: 0.5451
+F1. neg: 0.498 neu: 0.332 pos: 0.656 -> 0.495133
+[[158  33 134]
+ [ 81  73 135]
+ [ 71  45 367]]
+Fold: 9
+Acc: 0.5770
+F1. neg: 0.533 neu: 0.386 pos: 0.679 -> 0.532572
+[[167  35 123]
+ [ 71  87 131]
+ [ 64  40 379]]
+Fold: 10
+Acc: 0.5597
+F1. neg: 0.485 neu: 0.360 pos: 0.677 -> 0.507361
+[[147  34 144]
+ [ 79  80 130]
+ [ 55  41 387]]
+Average Acc: 0.5634
+Average F1. neg: 0.5099 neu: 0.3532 pos: 0.6737 -> 0.512281
+[[157.9, 34.4, 132.9]
+ [74.1, 77.8, 137.5]
+ [61.6, 38.9, 382.9]]
+-------------------------
+Test:
+Acc: 0.5955
+F1. neg: 0.550 neu: 0.381 pos: 0.702 -> 0.544309
+[[305  62 220]
+ [125 154 237]
+ [ 93  76 738]]
+
+
+
+
+
+
+
+
+
+
